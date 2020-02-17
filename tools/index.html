@@ -337,6 +337,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mfepy" title="mfe.py" class="md-nav__link">
+    mfe.py
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -508,6 +515,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mfepy" title="mfe.py" class="md-nav__link">
+    mfe.py
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -545,7 +559,7 @@
                 
                 
                 <h1 id="mcce-tools-reference">MCCE tools reference<a class="headerlink" href="#mcce-tools-reference" title="Permanent link">&para;</a></h1>
-<p><small><i>Page last updated on: 2020-01-23</i></small></p>
+<p><small><i>Page last updated on: 2020-02-16</i></small></p>
 <h2 id="improving-and-helping-runs">Improving and helping runs<a class="headerlink" href="#improving-and-helping-runs" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="energiespy">energies.py<a class="headerlink" href="#energiespy" title="Permanent link">&para;</a></h3>
@@ -669,6 +683,62 @@ based). Numbers can be separated by either comma or space.</p>
 <p>Run 
 <div class="codehilite"><pre><span></span><span class="k">state</span><span class="p">.</span><span class="n">py</span>
 </pre></div></p>
+<hr />
+<h3 id="mfepy">mfe.py<a class="headerlink" href="#mfepy" title="Permanent link">&para;</a></h3>
+<p><em>Analyze ionization energy by mean field approach.</em></p>
+<p><strong>Syntax:</strong>
+<div class="codehilite"><pre><span></span><span class="k">state</span><span class="p">.</span><span class="n">py</span> <span class="n">Residue_ID</span> <span class="n">pH</span> <span class="p">[</span><span class="n">pairwise</span> <span class="n">interaction</span> <span class="n">cut_off</span><span class="p">]</span>
+</pre></div></p>
+<ul>
+<li>Residue_ID: Residue ID as in pK.out</li>
+<li>pH: pH value at which ionization energy is calculated. Environment pH is a factor of AH &lt;=&gt; A- + H+ reaction. Also the calculation will use the conformation of other residues at this pH. </li>
+<li>cut_off: Report only pairwise interaction bigger than this cut off value.</li>
+</ul>
+<p><strong>Required files:</strong></p>
+<ul>
+<li>run.prm</li>
+<li>head3.lst</li>
+<li>extra.tpl for scaling factors that are not equal to 1.</li>
+<li>energies/*.opp for pairwise interactions </li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Check titration result in pKa.out:
+<div class="codehilite"><pre><span></span><span class="n">cat</span> <span class="n">pK</span><span class="p">.</span><span class="k">out</span>
+<span class="p">...</span> 
+ <span class="n">ASP</span><span class="o">-</span><span class="n">A0052_</span>        <span class="mi">2</span><span class="p">.</span><span class="mi">275</span>
+<span class="p">...</span>
+</pre></div></p>
+<p>ASP-A0052 is the residue_ID. Its calculated pKa is 2.275. At this point, the free energy of reaction from ASP neutral to ASP ionized should be close to 0.</p>
+<p>Run 
+<div class="codehilite"><pre><span></span><span class="n">jmao</span><span class="nv">@jmao</span><span class="o">-</span><span class="n">desktop</span><span class="w"> </span><span class="o">~/</span><span class="mi">3</span><span class="n">wum</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="n">mfe</span><span class="p">.</span><span class="n">py</span><span class="w"> </span><span class="n">ASP</span><span class="o">-</span><span class="n">A0052_</span><span class="w">  </span><span class="mf">2.275</span><span class="w"> </span><span class="mf">0.1</span><span class="w"></span>
+<span class="n">Residue</span><span class="w"> </span><span class="n">ASP</span><span class="o">-</span><span class="n">A0052_</span><span class="w"> </span><span class="n">pKa</span><span class="o">/</span><span class="n">Em</span><span class="o">=</span><span class="mf">2.275</span><span class="w"></span>
+<span class="o">=================================</span><span class="w"></span>
+<span class="n">Terms</span><span class="w">          </span><span class="n">pH</span><span class="w">     </span><span class="n">meV</span><span class="w">    </span><span class="n">Kcal</span><span class="w"></span>
+<span class="c1">---------------------------------</span>
+<span class="n">vdw0</span><span class="w">        </span><span class="o">-</span><span class="mf">0.01</span><span class="w">   </span><span class="o">-</span><span class="mf">0.71</span><span class="w">   </span><span class="o">-</span><span class="mf">0.02</span><span class="w"></span>
+<span class="n">vdw1</span><span class="w">         </span><span class="mf">0.00</span><span class="w">    </span><span class="mf">0.20</span><span class="w">    </span><span class="mf">0.00</span><span class="w"></span>
+<span class="n">tors</span><span class="w">        </span><span class="o">-</span><span class="mf">0.08</span><span class="w">   </span><span class="o">-</span><span class="mf">4.47</span><span class="w">   </span><span class="o">-</span><span class="mf">0.10</span><span class="w"></span>
+<span class="n">ebkb</span><span class="w">        </span><span class="o">-</span><span class="mf">0.82</span><span class="w">  </span><span class="o">-</span><span class="mf">47.40</span><span class="w">   </span><span class="o">-</span><span class="mf">1.11</span><span class="w"></span>
+<span class="n">dsol</span><span class="w">         </span><span class="mf">1.22</span><span class="w">   </span><span class="mf">71.06</span><span class="w">    </span><span class="mf">1.67</span><span class="w"></span>
+<span class="n">offset</span><span class="w">      </span><span class="o">-</span><span class="mf">0.62</span><span class="w">  </span><span class="o">-</span><span class="mf">36.17</span><span class="w">   </span><span class="o">-</span><span class="mf">0.85</span><span class="w"></span>
+<span class="n">pH</span><span class="o">&amp;</span><span class="n">pK0</span><span class="w">       </span><span class="mf">2.48</span><span class="w">  </span><span class="mf">143.66</span><span class="w">    </span><span class="mf">3.38</span><span class="w"></span>
+<span class="n">Eh</span><span class="o">&amp;</span><span class="n">Em0</span><span class="w">       </span><span class="mf">0.00</span><span class="w">    </span><span class="mf">0.00</span><span class="w">    </span><span class="mf">0.00</span><span class="w"></span>
+<span class="n">residues</span><span class="w">    </span><span class="o">-</span><span class="mf">2.17</span><span class="w"> </span><span class="o">-</span><span class="mf">126.03</span><span class="w">   </span><span class="o">-</span><span class="mf">2.96</span><span class="w"></span>
+<span class="o">*********************************</span><span class="w"></span>
+<span class="n">TOTAL</span><span class="w">        </span><span class="mf">0.00</span><span class="w">    </span><span class="mf">0.14</span><span class="w">    </span><span class="mf">0.00</span><span class="w">  </span><span class="n">sum_crg</span><span class="w"></span>
+<span class="o">*********************************</span><span class="w"></span>
+<span class="n">ASNA0044_</span><span class="w">   </span><span class="o">-</span><span class="mf">0.65</span><span class="w">  </span><span class="o">-</span><span class="mf">37.99</span><span class="w">   </span><span class="o">-</span><span class="mf">0.89</span><span class="w">    </span><span class="mf">0.00</span><span class="w"></span>
+<span class="n">ARGA0045_</span><span class="w">   </span><span class="o">-</span><span class="mf">0.11</span><span class="w">   </span><span class="o">-</span><span class="mf">6.45</span><span class="w">   </span><span class="o">-</span><span class="mf">0.15</span><span class="w">    </span><span class="mf">1.00</span><span class="w"></span>
+<span class="n">ASNA0046_</span><span class="w">   </span><span class="o">-</span><span class="mf">0.61</span><span class="w">  </span><span class="o">-</span><span class="mf">35.50</span><span class="w">   </span><span class="o">-</span><span class="mf">0.83</span><span class="w">    </span><span class="mf">0.00</span><span class="w"></span>
+<span class="n">ASPA0048_</span><span class="w">    </span><span class="mf">0.33</span><span class="w">   </span><span class="mf">19.44</span><span class="w">    </span><span class="mf">0.46</span><span class="w">   </span><span class="o">-</span><span class="mf">0.58</span><span class="w"></span>
+<span class="n">GLNA0057_</span><span class="w">    </span><span class="mf">0.15</span><span class="w">    </span><span class="mf">8.84</span><span class="w">    </span><span class="mf">0.21</span><span class="w">    </span><span class="mf">0.00</span><span class="w"></span>
+<span class="n">ASNA0059_</span><span class="w">   </span><span class="o">-</span><span class="mf">0.69</span><span class="w">  </span><span class="o">-</span><span class="mf">40.19</span><span class="w">   </span><span class="o">-</span><span class="mf">0.94</span><span class="w">    </span><span class="mf">0.00</span><span class="w"></span>
+<span class="n">ARGA0061_</span><span class="w">   </span><span class="o">-</span><span class="mf">0.25</span><span class="w">  </span><span class="o">-</span><span class="mf">14.74</span><span class="w">   </span><span class="o">-</span><span class="mf">0.35</span><span class="w">    </span><span class="mf">1.00</span><span class="w"></span>
+<span class="n">ASPA0066_</span><span class="w">    </span><span class="mf">0.14</span><span class="w">    </span><span class="mf">8.38</span><span class="w">    </span><span class="mf">0.20</span><span class="w">   </span><span class="o">-</span><span class="mf">0.41</span><span class="w"></span>
+<span class="n">ARGA0112_</span><span class="w">   </span><span class="o">-</span><span class="mf">0.18</span><span class="w">  </span><span class="o">-</span><span class="mf">10.37</span><span class="w">   </span><span class="o">-</span><span class="mf">0.24</span><span class="w">    </span><span class="mf">1.00</span><span class="w"></span>
+<span class="o">=================================</span><span class="w"></span>
+</pre></div></p>
+<p>You can do mfe calculation at pH other than mid-point.</p>
 <h2 id="parameter-file-preparation">Parameter file preparation<a class="headerlink" href="#parameter-file-preparation" title="Permanent link">&para;</a></h2>
 <h2 id="connecting-to-other-programs">Connecting to other programs<a class="headerlink" href="#connecting-to-other-programs" title="Permanent link">&para;</a></h2>
                 
