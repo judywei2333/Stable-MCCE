@@ -406,8 +406,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mfe_allpy" title="mfe_all.py" class="md-nav__link">
+    mfe_all.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanitypy" title="sanity.py" class="md-nav__link">
+    sanity.py
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sanitypy-tyr-a0013_-charge-000-expected-near-10-at-ph120-hisa0018_-charge-000-expected-near-10-at-ph-00-tyr-a0024_-charge-000-expected-near-10-at-ph120-lysa0062_-charge-055-expected-near-00-at-ph130-glu-a0073_-charge-074-expected-near-00-at-ph-20-asp-a0075_-charge-100-expected-near-00-at-ph-00-tyr-a0078_-charge-000-expected-near-10-at-ph120-tyr-a0090_-charge-009-expected-near-10-at-ph120-asp-a0093_-charge-083-expected-near-00-at-ph-10-tyr-a0097_-charge-017-expected-near-10-at-ph120-tyr-a0103_-charge-000-expected-near-10-at-ph120" title="$ sanity.py " class="md-nav__link">
+    $ sanity.py 
+  </a>
   
 </li>
       
@@ -658,8 +679,29 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#mfe_allpy" title="mfe_all.py" class="md-nav__link">
+    mfe_all.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sanitypy" title="sanity.py" class="md-nav__link">
+    sanity.py
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sanitypy-tyr-a0013_-charge-000-expected-near-10-at-ph120-hisa0018_-charge-000-expected-near-10-at-ph-00-tyr-a0024_-charge-000-expected-near-10-at-ph120-lysa0062_-charge-055-expected-near-00-at-ph130-glu-a0073_-charge-074-expected-near-00-at-ph-20-asp-a0075_-charge-100-expected-near-00-at-ph-00-tyr-a0078_-charge-000-expected-near-10-at-ph120-tyr-a0090_-charge-009-expected-near-10-at-ph120-asp-a0093_-charge-083-expected-near-00-at-ph-10-tyr-a0097_-charge-017-expected-near-10-at-ph120-tyr-a0103_-charge-000-expected-near-10-at-ph120" title="$ sanity.py " class="md-nav__link">
+    $ sanity.py 
+  </a>
   
 </li>
       
@@ -695,7 +737,7 @@
                 
                 
                 <h1 id="mcce-tools-reference">MCCE tools reference<a class="headerlink" href="#mcce-tools-reference" title="Permanent link">&para;</a></h1>
-<p><small><i>Page last updated on: 2020-06-03</i></small></p>
+<p><small><i>Page last updated on: 2020-06-08</i></small></p>
 <h2 id="improving-and-helping-runs">Improving and helping runs<a class="headerlink" href="#improving-and-helping-runs" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="step-by-step-mcce-run-scripts">step by step mcce run scripts<a class="headerlink" href="#step-by-step-mcce-run-scripts" title="Permanent link">&para;</a></h3>
@@ -1003,6 +1045,54 @@ HISA0102_   -0.02   -1.02   -0.02    <span class="m">1</span>.00
 <span class="o">=================================</span>
 </pre></div></p>
 <p>You can do mfe calculation at pH other than mid-point.</p>
+<hr />
+<h3 id="mfe_allpy">mfe_all.py<a class="headerlink" href="#mfe_allpy" title="Permanent link">&para;</a></h3>
+<p>Perform mfe analysis on all ionizable residues.</p>
+<p><strong>Syntax</strong>
+<div class="codehilite"><pre><span></span><span class="n">mfe_all</span><span class="p">.</span><span class="n">py</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">pH</span><span class="o">/</span><span class="n">Eh</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">x</span> <span class="n">TS_correction</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span> <span class="n">format</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">o</span> <span class="n">filename</span><span class="p">]</span>
+</pre></div></p>
+<ul>
+<li>pH/Eh: pH value at which ionization energy is calculated. Default is the pKa (midpoint) where dG = 0.</li>
+<li>TS_correction: "t" to include entropy in G, "f" not to include, "r" (default) will look for run.prm. If entropy correction was turned on in step 4, mfe should not include this term as entropy has been "removed".</li>
+<li>format: output file format, xlsx, csv, or html. The default is excel format xlsx.</li>
+<li>filename: output file name. The default is mfe_all.[ext]</li>
+</ul>
+<p><strong>Required files:</strong></p>
+<ul>
+<li>run.prm</li>
+<li>head3.lst</li>
+<li>extra.tpl for scaling factors that are not equal to 1.</li>
+<li>energies/*.opp for pairwise interactions</li>
+</ul>
+<p><strong>Example:</strong>
+<div class="codehilite"><pre><span></span><span class="n">mfe_all</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">f</span> <span class="n">html</span>
+<span class="n">MFE</span> <span class="k">output</span> <span class="n">saved</span> <span class="k">in</span> <span class="n">file</span> <span class="n">mfe_all</span><span class="p">.</span><span class="n">html</span>
+</pre></div></p>
+<hr />
+<h3 id="sanitypy">sanity.py<a class="headerlink" href="#sanitypy" title="Permanent link">&para;</a></h3>
+<p><em>Quick check on the charge state of ionizable residues abd report unusual charge.</em></p>
+<p><strong>Syntax</strong>
+<div class="codehilite"><pre><span></span><span class="n">sanity</span><span class="p">.</span><span class="n">py</span>
+</pre></div></p>
+<p><strong>Required files:</strong></p>
+<ul>
+<li>run.prm</li>
+<li>sum_crg.out</li>
+</ul>
+<p><strong>Example:</strong></p>
+<h2 id="sanitypy-tyr-a0013_-charge-000-expected-near-10-at-ph120-hisa0018_-charge-000-expected-near-10-at-ph-00-tyr-a0024_-charge-000-expected-near-10-at-ph120-lysa0062_-charge-055-expected-near-00-at-ph130-glu-a0073_-charge-074-expected-near-00-at-ph-20-asp-a0075_-charge-100-expected-near-00-at-ph-00-tyr-a0078_-charge-000-expected-near-10-at-ph120-tyr-a0090_-charge-009-expected-near-10-at-ph120-asp-a0093_-charge-083-expected-near-00-at-ph-10-tyr-a0097_-charge-017-expected-near-10-at-ph120-tyr-a0103_-charge-000-expected-near-10-at-ph120"><div class="codehilite"><pre><span></span>$ sanity.py 
+TYR-A0013_: charge  <span class="m">0</span>.00 expected near -1.0 at <span class="nv">pH</span><span class="o">=</span><span class="m">12</span>.0
+HIS+A0018_: charge  <span class="m">0</span>.00 expected near  <span class="m">1</span>.0 at <span class="nv">pH</span><span class="o">=</span> <span class="m">0</span>.0
+TYR-A0024_: charge  <span class="m">0</span>.00 expected near -1.0 at <span class="nv">pH</span><span class="o">=</span><span class="m">12</span>.0
+LYS+A0062_: charge  <span class="m">0</span>.55 expected near  <span class="m">0</span>.0 at <span class="nv">pH</span><span class="o">=</span><span class="m">13</span>.0
+GLU-A0073_: charge -0.74 expected near  <span class="m">0</span>.0 at <span class="nv">pH</span><span class="o">=</span> <span class="m">2</span>.0
+ASP-A0075_: charge -1.00 expected near  <span class="m">0</span>.0 at <span class="nv">pH</span><span class="o">=</span> <span class="m">0</span>.0
+TYR-A0078_: charge  <span class="m">0</span>.00 expected near -1.0 at <span class="nv">pH</span><span class="o">=</span><span class="m">12</span>.0
+TYR-A0090_: charge -0.09 expected near -1.0 at <span class="nv">pH</span><span class="o">=</span><span class="m">12</span>.0
+ASP-A0093_: charge -0.83 expected near  <span class="m">0</span>.0 at <span class="nv">pH</span><span class="o">=</span> <span class="m">1</span>.0
+TYR-A0097_: charge -0.17 expected near -1.0 at <span class="nv">pH</span><span class="o">=</span><span class="m">12</span>.0
+TYR-A0103_: charge  <span class="m">0</span>.00 expected near -1.0 at <span class="nv">pH</span><span class="o">=</span><span class="m">12</span>.0
+</pre></div><a class="headerlink" href="#sanitypy-tyr-a0013_-charge-000-expected-near-10-at-ph120-hisa0018_-charge-000-expected-near-10-at-ph-00-tyr-a0024_-charge-000-expected-near-10-at-ph120-lysa0062_-charge-055-expected-near-00-at-ph130-glu-a0073_-charge-074-expected-near-00-at-ph-20-asp-a0075_-charge-100-expected-near-00-at-ph-00-tyr-a0078_-charge-000-expected-near-10-at-ph120-tyr-a0090_-charge-009-expected-near-10-at-ph120-asp-a0093_-charge-083-expected-near-00-at-ph-10-tyr-a0097_-charge-017-expected-near-10-at-ph120-tyr-a0103_-charge-000-expected-near-10-at-ph120" title="Permanent link">&para;</a></h2>
 <h2 id="parameter-file-preparation">Parameter file preparation<a class="headerlink" href="#parameter-file-preparation" title="Permanent link">&para;</a></h2>
 <h2 id="connecting-to-other-programs">Connecting to other programs<a class="headerlink" href="#connecting-to-other-programs" title="Permanent link">&para;</a></h2>
                 
