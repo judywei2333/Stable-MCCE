@@ -1,38 +1,19 @@
 
 
 
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://gunnerlab.github.io/Stable-MCCE/runprm/">
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.1">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
     
     
       
@@ -40,9 +21,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6e35a1a6.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
       
         
@@ -51,89 +32,94 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
-    
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
-    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
     
+      
+        
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-74771869-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
   </head>
   
-    
-    
-    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="orange">
   
-    <svg class="md-svg">
-      <defs>
-        
-        
-      </defs>
-    </svg>
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="orange">
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#how-to-customize-runprm-the-run-configuration-file" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-customize-runprm-the-run-configuration-file" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="MCCE Documentation" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon">code</i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              MCCE Documentation
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Customize run.prm
-              
-            </span>
-          
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://gunnerlab.github.io/Stable-MCCE/" title="MCCE Documentation" class="md-header-nav__button md-logo" aria-label="MCCE Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.6 16.6l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            MCCE Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Customize run.prm
+            
+          </span>
         </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
+        <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -141,31 +127,32 @@
     </div>
   </div>
 </div>
-        
-      </div>
-      
-    </div>
+    
+    
   </nav>
 </header>
     
-    <div class="md-container">
+    <div class="md-container" data-md-component="container">
       
         
       
       
-      <main class="md-main">
-        <div class="md-main__inner md-grid" data-md-component="container">
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
           
             
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="MCCE Documentation" class="md-nav__button md-logo">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gunnerlab.github.io/Stable-MCCE/" title="MCCE Documentation" class="md-nav__button md-logo" aria-label="MCCE Documentation">
       
-        <i class="md-icon">code</i>
-      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.6 16.6l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4z"/></svg>
+
     </a>
     MCCE Documentation
   </label>
@@ -178,8 +165,8 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Overview" class="md-nav__link">
-      Overview
+    <a href=".." title="What is MCCE?" class="md-nav__link">
+      What is MCCE?
     </a>
   </li>
 
@@ -203,13 +190,19 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Tutorial and Examples
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="Tutorial and Examples" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Tutorial and Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -277,13 +270,19 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       How-Tos
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+    <nav class="md-nav" aria-label="How-Tos" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         How-Tos
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -298,13 +297,16 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Customize run.prm
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
     <a href="./" title="Customize run.prm" class="md-nav__link md-nav__link--active">
@@ -312,39 +314,44 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#runprm-format" title="run.prm format" class="md-nav__link">
+  <a href="#runprm-format" class="md-nav__link">
     run.prm format
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#most-commonly-edited-entries" title="Most commonly edited entries" class="md-nav__link">
+  <a href="#most-commonly-edited-entries" class="md-nav__link">
     Most commonly edited entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Most commonly edited entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input-and-output" title="Input and output" class="md-nav__link">
+  <a href="#input-and-output" class="md-nav__link">
     Input and output
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#major-mcce-steps" title="Major mcce steps" class="md-nav__link">
+  <a href="#major-mcce-steps" class="md-nav__link">
     Major mcce steps
   </a>
   
@@ -356,29 +363,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#less-edited-entries" title="Less edited entries" class="md-nav__link">
+  <a href="#less-edited-entries" class="md-nav__link">
     Less edited entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Less edited entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general" title="General" class="md-nav__link">
+  <a href="#general" class="md-nav__link">
     General
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-rotamer-making" title="Step 2, Rotamer making" class="md-nav__link">
+  <a href="#step-2-rotamer-making" class="md-nav__link">
     Step 2, Rotamer making
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-monte-carlo-sampling" title="Step 4, Monte Carlo sampling" class="md-nav__link">
+  <a href="#step-4-monte-carlo-sampling" class="md-nav__link">
     Step 4, Monte Carlo sampling
   </a>
   
@@ -390,22 +397,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-specific-entries" title="System specific entries" class="md-nav__link">
+  <a href="#system-specific-entries" class="md-nav__link">
     System specific entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="System specific entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#system-and-installation-location" title="System and installation location" class="md-nav__link">
+  <a href="#system-and-installation-location" class="md-nav__link">
     System and installation location
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#detail-levels-of-program-output" title="Detail levels of program output" class="md-nav__link">
+  <a href="#detail-levels-of-program-output" class="md-nav__link">
     Detail levels of program output
   </a>
   
@@ -417,43 +424,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-entries" title="Other entries" class="md-nav__link">
+  <a href="#other-entries" class="md-nav__link">
     Other entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Other entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" title="Step 1" class="md-nav__link">
+  <a href="#step-1" class="md-nav__link">
     Step 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2" title="Step 2:" class="md-nav__link">
+  <a href="#step-2" class="md-nav__link">
     Step 2:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3" title="step 3:" class="md-nav__link">
+  <a href="#step-3" class="md-nav__link">
     step 3:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4" title="step 4:" class="md-nav__link">
+  <a href="#step-4" class="md-nav__link">
     step 4:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ipece-parameters" title="IPECE parameters" class="md-nav__link">
+  <a href="#ipece-parameters" class="md-nav__link">
     IPECE parameters
   </a>
   
@@ -463,10 +470,6 @@
     </nav>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -523,6 +526,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../develop/" title="How to contribute code" class="md-nav__link">
+      How to contribute code
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -539,39 +554,44 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#runprm-format" title="run.prm format" class="md-nav__link">
+  <a href="#runprm-format" class="md-nav__link">
     run.prm format
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#most-commonly-edited-entries" title="Most commonly edited entries" class="md-nav__link">
+  <a href="#most-commonly-edited-entries" class="md-nav__link">
     Most commonly edited entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Most commonly edited entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#input-and-output" title="Input and output" class="md-nav__link">
+  <a href="#input-and-output" class="md-nav__link">
     Input and output
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#major-mcce-steps" title="Major mcce steps" class="md-nav__link">
+  <a href="#major-mcce-steps" class="md-nav__link">
     Major mcce steps
   </a>
   
@@ -583,29 +603,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#less-edited-entries" title="Less edited entries" class="md-nav__link">
+  <a href="#less-edited-entries" class="md-nav__link">
     Less edited entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Less edited entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general" title="General" class="md-nav__link">
+  <a href="#general" class="md-nav__link">
     General
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-rotamer-making" title="Step 2, Rotamer making" class="md-nav__link">
+  <a href="#step-2-rotamer-making" class="md-nav__link">
     Step 2, Rotamer making
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-monte-carlo-sampling" title="Step 4, Monte Carlo sampling" class="md-nav__link">
+  <a href="#step-4-monte-carlo-sampling" class="md-nav__link">
     Step 4, Monte Carlo sampling
   </a>
   
@@ -617,22 +637,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-specific-entries" title="System specific entries" class="md-nav__link">
+  <a href="#system-specific-entries" class="md-nav__link">
     System specific entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="System specific entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#system-and-installation-location" title="System and installation location" class="md-nav__link">
+  <a href="#system-and-installation-location" class="md-nav__link">
     System and installation location
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#detail-levels-of-program-output" title="Detail levels of program output" class="md-nav__link">
+  <a href="#detail-levels-of-program-output" class="md-nav__link">
     Detail levels of program output
   </a>
   
@@ -644,43 +664,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#other-entries" title="Other entries" class="md-nav__link">
+  <a href="#other-entries" class="md-nav__link">
     Other entries
   </a>
   
-    <nav class="md-nav">
+    <nav class="md-nav" aria-label="Other entries">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1" title="Step 1" class="md-nav__link">
+  <a href="#step-1" class="md-nav__link">
     Step 1
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2" title="Step 2:" class="md-nav__link">
+  <a href="#step-2" class="md-nav__link">
     Step 2:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3" title="step 3:" class="md-nav__link">
+  <a href="#step-3" class="md-nav__link">
     step 3:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4" title="step 4:" class="md-nav__link">
+  <a href="#step-4" class="md-nav__link">
     step 4:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ipece-parameters" title="IPECE parameters" class="md-nav__link">
+  <a href="#ipece-parameters" class="md-nav__link">
     IPECE parameters
   </a>
   
@@ -690,10 +710,6 @@
     </nav>
   
 </li>
-      
-      
-      
-      
       
     </ul>
   
@@ -706,6 +722,9 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
+                
+                
+                  
                 
                 
                 <h1 id="how-to-customize-runprm-the-run-configuration-file">How to customize run.prm, the run configuration file?<a class="headerlink" href="#how-to-customize-runprm-the-run-configuration-file" title="Permanent link">&para;</a></h1>
@@ -721,15 +740,15 @@
 <p>At the end of the line, the key string word is enclosed in a pair of parenthesis. The key string must be one word.</p>
 <p>If a key is detected from a line, the first word of the line is its value.</p>
 <p>For example:
-<div class="codehilite"><pre><span></span><span class="n">f</span>        <span class="n">step</span> <span class="mi">1</span><span class="p">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">run</span><span class="p">,</span> <span class="n">pdb</span><span class="o">-&gt;</span> <span class="n">mcce</span> <span class="n">pdb</span>                    <span class="p">(</span><span class="n">DO_PREMCCE</span><span class="p">)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>f        step 1: pre-run, pdb-&gt; mcce pdb                    (DO_PREMCCE)
+</code></pre></div>
 The key is "DO_MCCE" and the value is "f".</p>
 <p>Lines other than parameter lines are considered as comment lines, therefore ignored.</p>
 <h2 id="most-commonly-edited-entries">Most commonly edited entries<a class="headerlink" href="#most-commonly-edited-entries" title="Permanent link">&para;</a></h2>
 <h3 id="input-and-output">Input and output<a class="headerlink" href="#input-and-output" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">prot</span><span class="p">.</span><span class="n">pdb</span>                                                    <span class="p">(</span><span class="n">INPDB</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>prot.pdb                                                    (INPDB)
+</code></pre></div>
 Th parameter "INPDB" specifies a pdb file as the initial input structure.</p>
 <hr />
 <h3 id="major-mcce-steps">Major mcce steps<a class="headerlink" href="#major-mcce-steps" title="Permanent link">&para;</a></h3>
@@ -743,24 +762,24 @@ Th parameter "INPDB" specifies a pdb file as the initial input structure.</p>
 <li>DO_MONTE</li>
 </ul>
 <p>The value 't' is for true (do), and 'f' is for false (not do).
-<div class="codehilite"><pre><span></span><span class="nv">Steps</span>:
-<span class="nv">f</span>        <span class="nv">step</span> <span class="mi">1</span>: <span class="nv">pre</span><span class="o">-</span><span class="nv">run</span>, <span class="nv">pdb</span><span class="o">-&gt;</span> <span class="nv">mcce</span> <span class="nv">pdb</span>                    <span class="ss">(</span><span class="nv">DO_PREMCCE</span><span class="ss">)</span>
-<span class="nv">f</span>        <span class="nv">step</span> <span class="mi">2</span>: <span class="nv">make</span> <span class="nv">rotatmers</span>                             <span class="ss">(</span><span class="nv">DO_ROTAMERS</span><span class="ss">)</span>
-<span class="nv">f</span>        <span class="nv">step</span> <span class="mi">3</span>: <span class="k">do</span> <span class="nv">energy</span> <span class="nv">calculations</span>                     <span class="ss">(</span><span class="nv">DO_ENERGY</span><span class="ss">)</span>
-<span class="nv">f</span>        <span class="nv">step</span> <span class="mi">4</span>: <span class="nv">monte</span> <span class="nv">carlo</span> <span class="nv">sampling</span>                       <span class="ss">(</span><span class="nv">DO_MONTE</span><span class="ss">)</span>
-</pre></div></p>
+<div class="highlight"><pre><span></span><code>Steps:
+f        step 1: pre-run, pdb-&gt; mcce pdb                    (DO_PREMCCE)
+f        step 2: make rotatmers                             (DO_ROTAMERS)
+f        step 3: do energy calculations                     (DO_ENERGY)
+f        step 4: monte carlo sampling                       (DO_MONTE)
+</code></pre></div></p>
 <p>The later step depends on the out put of previous step.</p>
 <h2 id="less-edited-entries">Less edited entries<a class="headerlink" href="#less-edited-entries" title="Permanent link">&para;</a></h2>
 <p>Step 2 and step 4 have more flexibility and are customized more often than others.</p>
 <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">4</span>.<span class="mi">0</span>      <span class="nv">Protein</span> <span class="nv">dielectric</span> <span class="nv">constant</span> <span class="k">for</span> <span class="nv">DelPhi</span>             <span class="ss">(</span><span class="nv">EPSILON_PROT</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>4.0      Protein dielectric constant for DelPhi             (EPSILON_PROT)
+</code></pre></div>
 Dielectric constant of protein. Usually epsilon 8 is used for small soluble protein (~100 residues), and 4 is used for big trans-membrane protein (&gt; 200 residues).
 This value is used by step 2 to optimize rotamers and step 3 to compute energy table.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mcce</span><span class="o">/</span><span class="k">Stable</span><span class="o">-</span><span class="n">MCCE</span><span class="o">/</span><span class="n">extra</span><span class="p">.</span><span class="n">tpl</span>                              <span class="p">(</span><span class="n">EXTRA</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>/home/mcce/Stable-MCCE/extra.tpl                              (EXTRA)
+</code></pre></div>
 This file contains entries that overwrite those defined in ftpl and tpl files in param/ directory, and extral controls over the program.
 The extra controls are in two categories:</p>
 <ol>
@@ -768,8 +787,8 @@ The extra controls are in two categories:</p>
 <li>The scaling factor of van der Walls energy term. The recommended values are the inverse of dielectric constant defined by EPSILON_PROT.</li>
 </ol>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mcce</span><span class="o">/</span><span class="k">Stable</span><span class="o">-</span><span class="n">MCCE</span><span class="o">/</span><span class="n">name</span><span class="p">.</span><span class="n">txt</span> <span class="n">MCCE</span> <span class="n">renaming</span> <span class="k">rule</span><span class="p">.</span>           <span class="p">(</span><span class="n">RENAME_RULES</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>/home/mcce/Stable-MCCE/name.txt MCCE renaming rule.           (RENAME_RULES)
+</code></pre></div>
 The renaming rule can</p>
 <ul>
 <li>divide a big group into separate ionizable groups.</li>
@@ -779,345 +798,356 @@ The renaming rule can</p>
 <hr />
 <h3 id="step-2-rotamer-making">Step 2, Rotamer making<a class="headerlink" href="#step-2-rotamer-making" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">f</span>        <span class="nv">Use</span> <span class="nv">control</span> <span class="nv">file</span> <span class="s2">&quot;</span><span class="s">head1.lst</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="nv">rotamer</span> <span class="nv">making</span>    <span class="ss">(</span><span class="nv">ROT_SPECIF</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Use control file &quot;head1.lst&quot; for rotamer making    (ROT_SPECIF)
+</code></pre></div>
 This file enables site specific rotamer making rules. When set as "t", it overwrites the rules defined by run.prm.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">t</span>        <span class="k">Do</span> <span class="nv">swap</span> <span class="ss">(</span><span class="nv">stereo</span> <span class="nv">isotope</span><span class="ss">)</span>                           <span class="ss">(</span><span class="nv">ROT_SWAP</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t        Do swap (stereo isotope)                           (ROT_SWAP)
+</code></pre></div>
 Make stereo isotope conformers for residues like GLN and ASN.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">t</span>        <span class="k">Do</span> <span class="nv">rotate</span>?                                         <span class="ss">(</span><span class="nv">PACK</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t        Do rotate?                                         (PACK)
+</code></pre></div>
 Rotate around rotatable bonds?</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">6</span>        <span class="nb">number</span> <span class="k">of</span> <span class="n">rotamers</span> <span class="k">in</span> <span class="n">a</span> <span class="n">bond</span> <span class="n">rotation</span>              <span class="p">(</span><span class="n">ROTATIONS</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>6        number of rotamers in a bond rotation              (ROTATIONS)
+</code></pre></div>
 Number of rotamers in a bond rotation.</p>
 <hr />
 <h3 id="step-4-monte-carlo-sampling">Step 4, Monte Carlo sampling<a class="headerlink" href="#step-4-monte-carlo-sampling" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">ph</span>       <span class="s2">&quot;</span><span class="s">ph</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="nv">pH</span> <span class="nv">titration</span>, <span class="s2">&quot;</span><span class="s">eh</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="nv">eh</span> <span class="nv">titration</span>       <span class="ss">(</span><span class="nv">TITR_TYPE</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>ph       &quot;ph&quot; for pH titration, &quot;eh&quot; for eh titration       (TITR_TYPE)
+</code></pre></div>
 The type of simulation, pH or Eh.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>      <span class="n">Initial</span> <span class="n">pH</span>                                         <span class="p">(</span><span class="n">TITR_PH0</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0.0      Initial pH                                         (TITR_PH0)
+</code></pre></div>
 The starting pH, or the pH of Eh titration.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>      <span class="n">pH</span> <span class="nb">interval</span>                                        <span class="p">(</span><span class="n">TITR_PHD</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>1.0      pH interval                                        (TITR_PHD)
+</code></pre></div>
 The interval of pH titration</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span>      <span class="n">Initial</span> <span class="n">Eh</span>                                         <span class="p">(</span><span class="n">TITR_EH0</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0.0      Initial Eh                                         (TITR_EH0)
+</code></pre></div>
 The starting Eh, or the Eh of pH titration.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">30</span><span class="p">.</span><span class="mi">0</span>     <span class="n">Eh</span> <span class="nb">interval</span> <span class="p">(</span><span class="k">in</span> <span class="n">mV</span><span class="p">)</span>                                <span class="p">(</span><span class="n">TITR_EHD</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>30.0     Eh interval (in mV)                                (TITR_EHD)
+</code></pre></div>
 The interval of Eh titration.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">15</span>       <span class="nb">Number</span> <span class="k">of</span> <span class="n">titration</span> <span class="n">points</span>                         <span class="p">(</span><span class="n">TITR_STEPS</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>15       Number of titration points                         (TITR_STEPS)
+</code></pre></div>
 Number of titration points.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">f</span>        <span class="k">Output</span> <span class="n">Microstate</span> <span class="k">from</span> <span class="n">standard</span> <span class="n">monte</span> <span class="n">carlo</span>        <span class="p">(</span><span class="n">MS_OUT</span><span class="p">)</span>
-<span class="n">f</span>        <span class="k">Output</span> <span class="n">readable</span> <span class="n">micristate</span> <span class="n">file</span> <span class="k">from</span> <span class="n">standard</span> <span class="n">monte</span> <span class="n">carlo</span> <span class="p">(</span><span class="n">RE_MS_OUT</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Output Microstate from standard monte carlo        (MS_OUT)
+f        Output readable micristate file from standard monte carlo (RE_MS_OUT)
+</code></pre></div>
 Write out microstates or not.</p>
 <hr />
 <h2 id="system-specific-entries">System specific entries<a class="headerlink" href="#system-specific-entries" title="Permanent link">&para;</a></h2>
 <p>These entries are tailored to the system and installation.</p>
 <h3 id="system-and-installation-location">System and installation location<a class="headerlink" href="#system-and-installation-location" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mcce</span><span class="o">/</span><span class="k">Stable</span><span class="o">-</span><span class="n">MCCE</span>                                      <span class="p">(</span><span class="n">MCCE_HOME</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>/home/mcce/Stable-MCCE                                      (MCCE_HOME)
+</code></pre></div>
 The MCCE installation root. It is required by the program to find relevant parameters.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">mcce</span><span class="o">/</span><span class="k">Stable</span><span class="o">-</span><span class="n">MCCE</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">delphi</span> <span class="n">DelPhi</span> <span class="n">executable</span>           <span class="p">(</span><span class="n">DELPHI_EXE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>/home/mcce/Stable-MCCE/bin/delphi DelPhi executable           (DELPHI_EXE)
+</code></pre></div>
 PB solver delphi location.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">/</span><span class="n">tmp</span>     <span class="n">delphi</span> <span class="k">temporary</span> <span class="n">file</span> <span class="n">folder</span><span class="p">,</span> <span class="ss">&quot;/tmp&quot;</span> <span class="n">uses</span> <span class="n">node</span>     <span class="p">(</span><span class="n">PBE_FOLDER</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>/tmp     delphi temporary file folder, &quot;/tmp&quot; uses node     (PBE_FOLDER)
+</code></pre></div>
 Location of PB solver output. This should be a folder with write permission and large enough Sometimes to store GBs of files.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">new</span>.<span class="nv">tpl</span>     <span class="nv">local</span> <span class="nv">parameter</span> <span class="nv">file</span> <span class="k">for</span> <span class="nv">unrecognized</span> <span class="nv">res</span>       <span class="ss">(</span><span class="nv">NEWTPL</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>new.tpl     local parameter file for unrecognized res       (NEWTPL)
+</code></pre></div>
 Program mcce creates a temporary tpl file whenever it couldn't solve a new cofactor. The presumed parameters are in this file.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">debug</span><span class="p">.</span><span class="n">log</span>                                                   <span class="p">(</span><span class="n">DEBUG_LOG</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>debug.log                                                   (DEBUG_LOG)
+</code></pre></div>
 Debug log file name.</p>
 <hr />
 <h3 id="detail-levels-of-program-output">Detail levels of program output<a class="headerlink" href="#detail-levels-of-program-output" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">t</span>       <span class="n">Minimize</span> <span class="k">output</span> <span class="n">files</span>                               <span class="p">(</span><span class="n">MINIMIZE_SIZE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t       Minimize output files                               (MINIMIZE_SIZE)
+</code></pre></div>
 If this is "f", mcce will write more debug information.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">t</span>       <span class="n">Print</span> <span class="n">trace</span> <span class="n">file</span>                                    <span class="p">(</span><span class="n">DO_TRACE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t       Print trace file                                    (DO_TRACE)
+</code></pre></div>
 Creates a record with MCCE revision number, time and date of run, and all user options set in run.prm and appends it to (or creates) the run.trace file.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">t</span>        <span class="n">clean</span> <span class="n">up</span> <span class="n">delphi</span> <span class="n">focusing</span> <span class="n">directory</span><span class="o">?</span>                <span class="p">(</span><span class="n">DELPHI_CLEAN</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t        clean up delphi focusing directory?                (DELPHI_CLEAN)
+</code></pre></div>
 Flag of cleaning delphi temporary folder. Set to 't' only for debugging purpose.</p>
 <hr />
 <h2 id="other-entries">Other entries<a class="headerlink" href="#other-entries" title="Permanent link">&para;</a></h2>
 <h3 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">t</span>        <span class="n">Label</span> <span class="n">terminal</span> <span class="n">residues</span><span class="o">?</span>                           <span class="p">(</span><span class="n">TERMINALS</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t        Label terminal residues?                           (TERMINALS)
+</code></pre></div>
 If this flag is on 't', mcce program will identify the C terminus and N terminus of the polypeteides based on the geometry. Terminal residues have extra ionizable sites than residues having peptide bonds. One needs to be careful if there are missing piece of peptide in the given structure.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span>.<span class="mi">1</span>      <span class="nv">cut</span> <span class="nv">off</span> <span class="nv">water</span> <span class="k">if</span> <span class="o">%</span> <span class="nv">SAS</span> <span class="nv">exceeds</span> <span class="nv">this</span> <span class="nv">number</span>         <span class="ss">(</span><span class="nv">H2O_SASCUTOFF</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0.1      cut off water if % SAS exceeds this number         (H2O_SASCUTOFF)
+</code></pre></div>
 The water molecules are stripped of if the surface exposure is over this cutoff. This a recursive procedure which means after some waters are removed, the new surface exposure is recaculated and the process id repeated.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span>      <span class="n">distance</span> <span class="k">limit</span> <span class="k">of</span> <span class="n">reporting</span> <span class="n">clashes</span>                <span class="p">(</span><span class="n">CLASH_DISTANCE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>2.0      distance limit of reporting clashes                (CLASH_DISTANCE)
+</code></pre></div>
 The threshold to report abnormal distance found between non-bonded atoms.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">t</span>       <span class="k">ignore</span> <span class="n">hydrogens</span> <span class="k">in</span> <span class="k">input</span> <span class="k">structure</span>                 <span class="p">(</span><span class="n">IGNORE_INPUT_H</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t       ignore hydrogens in input structure                 (IGNORE_INPUT_H)
+</code></pre></div>
 Delete and rebuild input H atoms in step 1 and step 2.</p>
 <hr />
 <h3 id="step-2">Step 2:<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">t</span>        <span class="n">Rebuild</span> <span class="n">sidechain</span> <span class="n">based</span> <span class="k">on</span> <span class="n">torsion</span> <span class="n">minima</span>          <span class="p">(</span><span class="n">REBUILD_SC</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t        Rebuild sidechain based on torsion minima          (REBUILD_SC)
+</code></pre></div>
 Rebuild side chain.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">f</span>        <span class="k">Do</span> <span class="nv">swing</span>?                                          <span class="ss">(</span><span class="nv">SWING</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Do swing?                                          (SWING)
+</code></pre></div>
 Swing conformers deviate from their parent conformer by a small degree.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>     <span class="n">phi</span> <span class="k">in</span> <span class="n">degrees</span> <span class="k">of</span> <span class="n">swing</span>                            <span class="p">(</span><span class="n">PHI_SWING</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>10.0     phi in degrees of swing                            (PHI_SWING)
+</code></pre></div>
 Swing angle.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">1</span><span class="p">.</span><span class="mi">00</span>     <span class="n">SAS</span> <span class="n">cuttoff</span> <span class="k">of</span> <span class="n">making</span> <span class="n">fewer</span> <span class="n">rotamers</span>               <span class="p">(</span><span class="n">SAS_CUTOFF</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>1.00     SAS cuttoff of making fewer rotamers               (SAS_CUTOFF)
+</code></pre></div>
 Surface residues get fewer rotamers. There is another mechanism to search the most exposed rotamer to compensate this.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span>     <span class="n">Cutoff</span> <span class="k">of</span> <span class="k">self</span> <span class="n">vdw</span> <span class="k">in</span> <span class="n">kcal</span><span class="o">/</span><span class="n">mol</span>                     <span class="p">(</span><span class="n">VDW_CUTOFF</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>10.0     Cutoff of self vdw in kcal/mol                     (VDW_CUTOFF)
+</code></pre></div>
 If a rotamer has self energy, comparing with the most favorable one, over this cutoff, it will not ne kept.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">5000</span>     <span class="nb">number</span> <span class="k">of</span> <span class="n">repacks</span>                                  <span class="p">(</span><span class="n">REPACKS</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>5000     number of repacks                                  (REPACKS)
+</code></pre></div>
 The rotamer optimization starts from random initial state, then minimizes the energy on each side chain. The number of restarts of this process is rapacks.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span><span class="p">.</span><span class="mi">03</span>     <span class="n">occupancy</span> <span class="n">cutoff</span> <span class="k">of</span> <span class="n">repacks</span>                        <span class="p">(</span><span class="n">REPACK_CUTOFF</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0.03     occupancy cutoff of repacks                        (REPACK_CUTOFF)
+</code></pre></div>
 The occupancy of side chain conformer lower than this value will not be kept.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">t</span>        <span class="n">h</span><span class="o">-</span><span class="n">bond</span> <span class="n">directed</span> <span class="n">rotamer</span> <span class="n">making</span>                     <span class="p">(</span><span class="n">HDIRECTED</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t        h-bond directed rotamer making                     (HDIRECTED)
+</code></pre></div>
 Do search on hydrogen bond.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">1</span>.<span class="mi">0</span>      <span class="nv">threshold</span> <span class="k">for</span> <span class="nv">two</span> <span class="nv">conformers</span> <span class="nv">being</span> <span class="nv">different</span>       <span class="ss">(</span><span class="nv">HDIRDIFF</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>1.0      threshold for two conformers being different       (HDIRDIFF)
+</code></pre></div>
 Only one of the similar conformers is kept. Similarity os measured by Root Mean Square Deviation.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">36</span>       <span class="k">Limit</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">the</span> <span class="n">H</span> <span class="n">bond</span> <span class="n">conformers</span>              <span class="p">(</span><span class="n">HDIRLIMT</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>36       Limit number of the H bond conformers              (HDIRLIMT)
+</code></pre></div>
 The number limit on H bond directed conformers.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">f</span>        <span class="k">Do</span> <span class="nv">relaxation</span> <span class="nv">on</span> <span class="nv">water</span>                             <span class="ss">(</span><span class="nv">RELAX_WAT</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Do relaxation on water                             (RELAX_WAT)
+</code></pre></div>
 Move water molecules to relax the distance crash.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">3</span>.<span class="mi">2</span>      <span class="k">if</span> <span class="nv">distance</span> <span class="nv">between</span> <span class="nv">water</span> <span class="nv">and</span> <span class="nv">heavy</span> <span class="nv">atom</span> <span class="nv">is</span> <span class="nv">smaller</span> <span class="nv">than</span> <span class="nv">this</span>, <span class="nv">move</span> <span class="nv">water</span> <span class="nv">away</span>  <span class="ss">(</span><span class="nv">WATER_RELAX_THR</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>3.2      if distance between water and heavy atom is smaller than this, move water away  (WATER_RELAX_THR)
+</code></pre></div>
 The threshold of moving water.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">10</span>       <span class="nb">number</span> <span class="k">of</span> <span class="n">cycles</span> <span class="k">to</span> <span class="n">relax</span> <span class="n">rotamer</span> <span class="n">clash</span>            <span class="p">(</span><span class="n">HV_RELAX_NCYCLE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>10       number of cycles to relax rotamer clash            (HV_RELAX_NCYCLE)
+</code></pre></div>
 Heavy atom rotamer relaxation by MD. Number of global restarts (cycles).</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">10</span>       <span class="nv">time</span> <span class="ss">(</span><span class="nv">in</span> <span class="nv">fs</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">relaxation</span> <span class="nv">iteration</span>         <span class="ss">(</span><span class="nv">HV_RELAX_DT</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>10       time (in fs) for each relaxation iteration         (HV_RELAX_DT)
+</code></pre></div>
 Heavy atom rotamer relaxation time.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">10</span>       <span class="nb">number</span> <span class="k">of</span> <span class="n">iterations</span>                               <span class="p">(</span><span class="n">HV_RELAX_NITER</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>10       number of iterations                               (HV_RELAX_NITER)
+</code></pre></div>
 Number of local restarts.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">2</span>.       <span class="nv">relax</span> <span class="nv">rotamer</span> <span class="k">if</span> <span class="nv">vdw</span> <span class="nv">interaction</span> <span class="nv">is</span> <span class="nv">bigger</span> <span class="nv">than</span> <span class="nv">this</span> <span class="ss">(</span><span class="nv">HV_RELAX_VDW_THR</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>2.       relax rotamer if vdw interaction is bigger than this (HV_RELAX_VDW_THR)
+</code></pre></div>
 Lower end threshold of relaxing rotamers, Van der Waals energy value in kcal/mol.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">5</span>.       <span class="nv">not</span> <span class="nv">relax</span> <span class="nv">rotamer</span> <span class="k">if</span> <span class="nv">heavy</span> <span class="nv">atom</span> <span class="nv">vdw</span> <span class="nv">is</span> <span class="nv">bigger</span> <span class="nv">than</span> <span class="nv">this</span> <span class="ss">(</span><span class="nv">HV_RELAX_HV_VDW_THR</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>5.       not relax rotamer if heavy atom vdw is bigger than this (HV_RELAX_HV_VDW_THR)
+</code></pre></div>
 High end threshold of relaxing rotamers, Van der Waals energy value in kcal/mol.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span>     <span class="nv">relax</span> <span class="k">if</span> <span class="nv">electrostatic</span> <span class="nv">interaction</span> <span class="nv">is</span> <span class="nv">more</span> <span class="nv">favorable</span> <span class="nv">than</span> <span class="nv">this</span>, <span class="nv">and</span> <span class="nv">the</span> <span class="nv">charged</span> <span class="nv">groups</span> <span class="nv">are</span> <span class="nv">close</span>  <span class="ss">(</span><span class="nv">HV_RELAX_ELEC_THR</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>-1.0     relax if electrostatic interaction is more favorable than this, and the charged groups are close  (HV_RELAX_ELEC_THR)
+</code></pre></div>
 Relax heavy atoms when they show dominantly favorable electrostatic interaction.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>      <span class="n">threshold</span> <span class="n">used</span> <span class="k">to</span> <span class="n">define</span> <span class="n">a</span> <span class="n">charged</span> <span class="n">atom</span><span class="p">,</span> <span class="n">see</span> <span class="n">hv_relax_elec_dist_thr</span> <span class="p">(</span><span class="n">HV_RELAX_ELEC_CRG_THR</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0.1      threshold used to define a charged atom, see hv_relax_elec_dist_thr (HV_RELAX_ELEC_CRG_THR)
+</code></pre></div>
 Atoms with charge over this value are considered charged atoms.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span>      <span class="k">only</span> <span class="n">relax</span> <span class="n">electrostatically</span> <span class="n">favorable</span> <span class="n">pairs</span> <span class="n">that</span> <span class="n">has</span> <span class="n">charged</span> <span class="n">atom</span> <span class="n">distance</span> <span class="n">shorter</span> <span class="k">than</span> <span class="n">this</span> <span class="p">(</span><span class="n">HV_RELAX_ELEC_DIST_THR</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>3.0      only relax electrostatically favorable pairs that has charged atom distance shorter than this (HV_RELAX_ELEC_DIST_THR)
+</code></pre></div>
 Relax heavy atoms when they show close proximity.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">20</span>.      <span class="nv">scaling</span> <span class="nv">factor</span> <span class="k">for</span> <span class="nv">torsion</span> <span class="nv">during</span> <span class="nv">relaxation</span>       <span class="ss">(</span><span class="nv">HV_TORS_SCALE</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>20.      scaling factor for torsion during relaxation       (HV_TORS_SCALE)
+</code></pre></div>
 Scaling factor for torsion energy when searching torsion minima.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">10000</span>    <span class="n">maximun</span> <span class="n">n</span> <span class="n">steps</span> <span class="k">of</span> <span class="n">shake</span>                           <span class="p">(</span><span class="n">HV_RELAX_N_SHAKE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>10000    maximun n steps of shake                           (HV_RELAX_N_SHAKE)
+</code></pre></div>
 MD shake parameter.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span>.<span class="mi">001</span>    <span class="nv">maximun</span> <span class="nv">allowance</span> <span class="k">for</span> <span class="nv">bond</span> <span class="nv">length</span> <span class="nv">to</span> <span class="nv">deviate</span>       <span class="ss">(</span><span class="nv">HV_RELAX_SHAKE_TOL</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0.001    maximun allowance for bond length to deviate       (HV_RELAX_SHAKE_TOL)
+</code></pre></div>
 MD bond length detaion parameter.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span>      <span class="k">constraint</span> <span class="n">distance</span>                                <span class="p">(</span><span class="n">HV_RELAX_CONSTRAINT</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>1.0      constraint distance                                (HV_RELAX_CONSTRAINT)
+</code></pre></div>
 MD atom constrain distance.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">20</span>.      <span class="nv">constraint</span> <span class="nv">force</span> <span class="k">for</span> <span class="nv">atom</span> <span class="nv">stay</span> <span class="nv">in</span> <span class="nv">original</span> <span class="nv">position</span> <span class="ss">(</span><span class="nv">HV_RELAX_CONSTRAINT_FRC</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>20.      constraint force for atom stay in original position (HV_RELAX_CONSTRAINT_FRC)
+</code></pre></div>
 MD atom constraint force.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">f</span>        <span class="k">include</span> <span class="nv">neighbors</span> <span class="nv">when</span> <span class="nv">doing</span> <span class="nv">relaxation</span> <span class="ss">(</span><span class="nv">expensive</span><span class="ss">)</span> <span class="ss">(</span><span class="nv">HV_RELAX_INCLUDE_NGH</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        include neighbors when doing relaxation (expensive) (HV_RELAX_INCLUDE_NGH)
+</code></pre></div>
 Include neighbor in MD relaxation.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">4</span>.<span class="mi">0</span>      <span class="nv">threshold</span> <span class="k">for</span> <span class="k">include</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">neighbor</span> <span class="nv">during</span> <span class="nv">relaxation</span> <span class="ss">(</span><span class="nv">HV_RELAX_NGH_THR</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>4.0      threshold for include as a neighbor during relaxation (HV_RELAX_NGH_THR)
+</code></pre></div>
 Define a neighboring side chain.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">t</span>        <span class="k">Do</span> <span class="nv">relaxation</span> <span class="nv">on</span> <span class="nv">hydrogens</span>                         <span class="ss">(</span><span class="nv">RELAX_H</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>t        Do relaxation on hydrogens                         (RELAX_H)
+</code></pre></div>
 Optimize hydrogen position.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">-</span><span class="mi">5</span>.<span class="mi">0</span>     <span class="nv">Energy</span> <span class="nv">threshold</span> <span class="k">for</span> <span class="nv">keeping</span> <span class="nv">the</span> <span class="nv">conformer</span>         <span class="ss">(</span><span class="nv">RELAX_E_THR</span><span class="ss">)</span>
-<span class="mi">200</span>      <span class="k">Loop</span> <span class="nv">over</span> <span class="nv">N</span> <span class="nv">local</span> <span class="nv">microstates</span>                      <span class="ss">(</span><span class="nv">RELAX_NSTATES</span><span class="ss">)</span>
-<span class="mi">6</span>        <span class="nv">default</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">hydroxyl</span> <span class="nv">positions</span>               <span class="ss">(</span><span class="nv">RELAX_N_HYD</span><span class="ss">)</span>
-<span class="mi">5</span>.       <span class="k">do</span> <span class="nv">not</span> <span class="nv">relax</span> <span class="nv">hydrogen</span> <span class="k">if</span> <span class="nv">vdw</span> <span class="nv">bwt</span> <span class="nv">two</span> <span class="nv">sidechain</span> <span class="nv">conformer</span> <span class="nv">bigger</span> <span class="nv">than</span> <span class="nv">this</span>    <span class="ss">(</span><span class="nv">RELAX_CLASH_THR</span><span class="ss">)</span>
-<span class="mi">1</span>.<span class="mi">0</span>      <span class="nv">phi</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">step</span> <span class="nv">of</span> <span class="nv">relaxation</span>                    <span class="ss">(</span><span class="nv">RELAX_PHI</span><span class="ss">)</span>
-<span class="mi">300</span>      <span class="nv">Maximum</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">steps</span> <span class="nv">of</span> <span class="nv">relaxation</span>              <span class="ss">(</span><span class="nv">RELAX_NITER</span><span class="ss">)</span>
-<span class="mi">0</span>.<span class="mi">5</span>      <span class="nv">Torque</span> <span class="nv">threshold</span> <span class="k">for</span> <span class="nv">keep</span> <span class="nv">relaxing</span>                 <span class="ss">(</span><span class="nv">RELAX_TORQ_THR</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>-5.0     Energy threshold for keeping the conformer         (RELAX_E_THR)
+200      Loop over N local microstates                      (RELAX_NSTATES)
+6        default number of hydroxyl positions               (RELAX_N_HYD)
+5.       do not relax hydrogen if vdw bwt two sidechain conformer bigger than this    (RELAX_CLASH_THR)
+1.0      phi for each step of relaxation                    (RELAX_PHI)
+300      Maximum number of steps of relaxation              (RELAX_NITER)
+0.5      Torque threshold for keep relaxing                 (RELAX_TORQ_THR)
+</code></pre></div>
 These parameters are for MD relaxation.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span>.<span class="mi">02</span>     <span class="nv">Last</span> <span class="nv">pruning</span> <span class="nv">threshold</span> <span class="k">for</span> <span class="nv">conformers</span>              <span class="ss">(</span><span class="nv">PRUNE_THR</span><span class="ss">)</span>
-<span class="mi">0</span>.<span class="mi">5</span>      <span class="nv">Pruning</span> <span class="nv">cutoff</span> <span class="nv">of</span> <span class="nv">RMSD</span>                             <span class="ss">(</span><span class="nv">PRUNE_RMSD</span><span class="ss">)</span>
-<span class="mi">1</span>.<span class="mi">0</span>      <span class="nv">Pruning</span> <span class="nv">cutoff</span> <span class="nv">of</span> <span class="nv">eletrostatic</span> <span class="nv">pairwise</span>            <span class="ss">(</span><span class="nv">PRUNE_ELE</span><span class="ss">)</span>
-<span class="mi">8</span>.<span class="mi">0</span>      <span class="nv">Pruning</span> <span class="nv">cutoff</span> <span class="nv">of</span> <span class="nv">vdw</span> <span class="nv">pairwise</span>                     <span class="ss">(</span><span class="nv">PRUNE_VDW</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0.02     Last pruning threshold for conformers              (PRUNE_THR)
+0.5      Pruning cutoff of RMSD                             (PRUNE_RMSD)
+1.0      Pruning cutoff of eletrostatic pairwise            (PRUNE_ELE)
+8.0      Pruning cutoff of vdw pairwise                     (PRUNE_VDW)
+</code></pre></div>
 To reduce the number of final conformers, similar conformers are grouped into one. The similarity is defined by these parameters.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">0</span>        <span class="n">maximum</span> <span class="nb">number</span> <span class="k">of</span> <span class="n">conformer</span> <span class="n">per</span> <span class="n">residue</span> <span class="p">(</span> <span class="mi">0</span><span class="o">=</span><span class="n">unlimited</span> <span class="p">)</span> <span class="p">(</span><span class="n">NCONF_LIMIT</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>0        maximum number of conformer per residue ( 0=unlimited ) (NCONF_LIMIT)
+</code></pre></div>
 Set a limit to final conformers of a residue.</p>
 <hr />
 <h3 id="step-3">step 3:<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">f</span>        <span class="nv">Use</span> <span class="nv">SAS</span> <span class="o">+</span> <span class="nv">Coulomb</span><span class="s1">&#39;</span><span class="s">s law for ele interaction        (QUICK_ENERGIES)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Use SAS + Coulomb&#39;s law for ele interaction        (QUICK_ENERGIES)
+</code></pre></div>
 Use coulomb's law instead of solving PB equation.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">80</span>.<span class="mi">0</span>     <span class="nv">Solvent</span> <span class="nv">dielectric</span> <span class="nv">constant</span> <span class="k">for</span> <span class="nv">DelPhi</span>             <span class="ss">(</span><span class="nv">EPSILON_SOLV</span><span class="ss">)</span>
-<span class="mi">65</span>       <span class="nv">Grids</span> <span class="nv">in</span> <span class="nv">each</span> <span class="nv">DelPhi</span>                               <span class="ss">(</span><span class="nv">GRIDS_DELPHI</span><span class="ss">)</span>
-<span class="mi">2</span>.<span class="mi">0</span>      <span class="nv">The</span> <span class="nv">target</span> <span class="nv">grids</span> <span class="nv">per</span> <span class="nv">angstrom</span> <span class="k">for</span> <span class="nv">DelPhi</span>           <span class="ss">(</span><span class="nv">GRIDS_PER_ANG</span><span class="ss">)</span>
-<span class="mi">1</span>.<span class="mi">4</span>      <span class="nv">Radius</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">probe</span>                                <span class="ss">(</span><span class="nv">RADIUS_PROBE</span><span class="ss">)</span>
-<span class="mi">2</span>.<span class="mi">0</span>      <span class="nv">Ion</span> <span class="nv">radius</span>                                         <span class="ss">(</span><span class="nv">IONRAD</span><span class="ss">)</span>
-<span class="mi">0</span>.<span class="mi">15</span>     <span class="nv">Salt</span>                                               <span class="ss">(</span><span class="nv">SALT</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>80.0     Solvent dielectric constant for DelPhi             (EPSILON_SOLV)
+65       Grids in each DelPhi                               (GRIDS_DELPHI)
+2.0      The target grids per angstrom for DelPhi           (GRIDS_PER_ANG)
+1.4      Radius of the probe                                (RADIUS_PROBE)
+2.0      Ion radius                                         (IONRAD)
+0.15     Salt                                               (SALT)
+</code></pre></div>
 PB solver parameters.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">f</span>        <span class="n">skip</span> <span class="n">delphi</span> <span class="k">in</span> <span class="n">step3</span> <span class="p">(</span><span class="n">DEBUG</span> <span class="k">option</span><span class="p">)</span>                <span class="p">(</span><span class="n">SKIP_ELE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        skip delphi in step3 (DEBUG option)                (SKIP_ELE)
+</code></pre></div>
 This is a debug option.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="nv">f</span>        <span class="nv">Reassign</span> <span class="nv">charge</span> <span class="nv">and</span> <span class="nv">radii</span> <span class="nv">before</span> <span class="nv">delphi</span><span class="ss">(</span><span class="k">if</span> <span class="nv">not</span> <span class="nv">true</span> <span class="k">then</span> <span class="nv">use</span> <span class="nv">value</span> <span class="nv">in</span> <span class="nv">PDB</span> <span class="nv">file</span><span class="ss">)</span> <span class="ss">(</span><span class="nv">REASSIGN</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Reassign charge and radii before delphi(if not true then use value in PDB file) (REASSIGN)
+</code></pre></div>
 Step 3 uses atom charges from step2_out.pdb. Use this to overwrite.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">f</span>        <span class="n">Recalculate</span> <span class="n">torsions</span> <span class="n">energy</span> <span class="k">when</span> <span class="k">write</span> <span class="k">out</span> <span class="n">head3</span><span class="p">.</span><span class="n">lst</span> <span class="p">(</span><span class="n">RECALC_TORS</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Recalculate torsions energy when write out head3.lst (RECALC_TORS)
+</code></pre></div>
 Recalculate torsion energy.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">1</span>.<span class="mi">7</span>      <span class="nv">defalut</span> <span class="nv">van</span> <span class="nv">der</span> <span class="nv">Waals</span> <span class="nv">radius</span>, <span class="k">for</span> <span class="nv">SAS</span>              <span class="ss">(</span><span class="nv">DEFAULT_RADIUS</span><span class="ss">)</span>
-<span class="mi">0</span>.<span class="mi">5</span>      <span class="nv">factor</span> <span class="nv">to</span> <span class="mi">1</span><span class="o">-</span><span class="mi">4</span> <span class="nv">LJ</span> <span class="nv">potontial</span> <span class="ss">(</span><span class="mi">1</span>.<span class="mi">0</span> <span class="nv">is</span> <span class="nv">full</span><span class="ss">)</span>           <span class="ss">(</span><span class="nv">FACTOR_14LJ</span><span class="ss">)</span>
-<span class="mi">6</span>.<span class="mi">0</span>      <span class="nv">dielectric</span> <span class="nv">constant</span> <span class="k">for</span> <span class="nv">Coulomb</span><span class="s1">&#39;</span><span class="s">s law              (EPSILON_COULOMB)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>1.7      defalut van der Waals radius, for SAS              (DEFAULT_RADIUS)
+0.5      factor to 1-4 LJ potontial (1.0 is full)           (FACTOR_14LJ)
+6.0      dielectric constant for Coulomb&#39;s law              (EPSILON_COULOMB)
+</code></pre></div>
 More parameters used by the prigram in step 1, 2 and 3.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">1</span>         <span class="nv">delphi</span> <span class="nv">start</span> <span class="nv">conformer</span> <span class="nv">number</span>, <span class="mi">0</span> <span class="nv">based</span>            <span class="ss">(</span><span class="nv">PBE_START</span><span class="ss">)</span>
-<span class="mi">99999</span>     <span class="nv">delphi</span> <span class="k">end</span> <span class="nv">conformer</span> <span class="nv">number</span>, <span class="nv">self</span> <span class="nv">included</span>        <span class="ss">(</span><span class="nv">PBE_END</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>1         delphi start conformer number, 0 based            (PBE_START)
+99999     delphi end conformer number, self included        (PBE_END)
+</code></pre></div>
 Start and end of PB solution on conformers.</p>
 <hr />
 <h3 id="step-4">step 4:<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">f</span>        <span class="n">Average</span> <span class="n">the</span> <span class="n">pairwise</span><span class="p">,</span> <span class="ss">&quot;f&quot;</span> <span class="n">uses</span> <span class="n">the</span> <span class="n">smaller</span>         <span class="p">(</span><span class="n">AVERAGE_PAIRWISE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f        Average the pairwise, &quot;f&quot; uses the smaller         (AVERAGE_PAIRWISE)
+</code></pre></div>
 When loading energy from step 3, average the pairwise interaction.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">20</span><span class="p">.</span>      <span class="n">Warning</span> <span class="n">Threshold</span> <span class="k">of</span> <span class="n">difference</span> <span class="k">in</span> <span class="n">pairwise</span>       <span class="p">(</span><span class="n">WARN_PAIRWISE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>20.      Warning Threshold of difference in pairwise       (WARN_PAIRWISE)
+</code></pre></div>
 Issue a warning message if asymmetric pairwise interaction is detected.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span>      <span class="n">Big</span> <span class="n">pairwise</span> <span class="n">threshold</span> <span class="k">to</span> <span class="n">make</span> <span class="n">big</span> <span class="n">list</span>            <span class="p">(</span><span class="n">BIG_PAIRWISE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>5.0      Big pairwise threshold to make big list            (BIG_PAIRWISE)
+</code></pre></div>
 Residues with big interactions may get synchronized flips. This is the cut off value.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="o">-</span><span class="mi">1</span>       <span class="k">Random</span> <span class="nv">seed</span>, <span class="o">-</span><span class="mi">1</span> <span class="nv">uses</span> <span class="nv">time</span> <span class="nv">as</span> <span class="k">random</span> <span class="nv">seed</span>           <span class="ss">(</span><span class="nv">MONTE_SEED</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>-1       Random seed, -1 uses time as random seed           (MONTE_SEED)
+</code></pre></div>
 Random seed.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="mi">298</span><span class="p">.</span><span class="mi">15</span>   <span class="n">Temperature</span>                                        <span class="p">(</span><span class="n">MONTE_T</span><span class="p">)</span>
-<span class="mi">3</span>        <span class="nb">Number</span> <span class="k">of</span> <span class="n">flips</span>                                    <span class="p">(</span><span class="n">MONTE_FLIPS</span><span class="p">)</span>
-<span class="mi">100</span>      <span class="n">Annealing</span> <span class="o">=</span> <span class="n">n_start</span> <span class="o">*</span> <span class="n">confs</span>                        <span class="p">(</span><span class="n">MONTE_NSTART</span><span class="p">)</span>
-<span class="mi">500</span>      <span class="n">Equalibration</span> <span class="o">=</span> <span class="n">n_eq</span> <span class="o">*</span> <span class="n">confs</span>                       <span class="p">(</span><span class="n">MONTE_NEQ</span><span class="p">)</span>
-<span class="mi">0</span><span class="p">.</span><span class="mi">001</span>    <span class="n">Cut</span><span class="o">-</span><span class="k">off</span> <span class="n">occupancy</span> <span class="k">of</span> <span class="n">the</span> <span class="n">reduction</span>                 <span class="p">(</span><span class="n">MONTE_REDUCE</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>298.15   Temperature                                        (MONTE_T)
+3        Number of flips                                    (MONTE_FLIPS)
+100      Annealing = n_start * confs                        (MONTE_NSTART)
+500      Equalibration = n_eq * confs                       (MONTE_NEQ)
+0.001    Cut-off occupancy of the reduction                 (MONTE_REDUCE)
+</code></pre></div>
 Monte Carlo simulation parameters.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span>###  <span class="nv">Only</span> <span class="k">for</span> <span class="nv">Junjun</span><span class="s1">&#39;</span><span class="s">s monte carlo</span>
-<span class="mi">2</span>        <span class="nv">Number</span> <span class="nv">of</span> <span class="nv">independent</span> <span class="nv">monte</span> <span class="nv">carlo</span> <span class="nv">sampling</span>         <span class="ss">(</span><span class="nv">MONTE_RUNS</span><span class="ss">)</span>
-<span class="mi">2000</span>     <span class="nv">Sampling</span> <span class="o">=</span> <span class="nv">n_iter</span> <span class="o">*</span> <span class="nv">confs</span>                          <span class="ss">(</span><span class="nv">MONTE_NITER</span><span class="ss">)</span>
-<span class="mi">20000</span>    <span class="nv">Trace</span> <span class="nv">energy</span> <span class="nv">each</span> <span class="nv">MONTE_TRACE</span> <span class="nv">steps</span>, <span class="mi">0</span> <span class="nv">no</span> <span class="nv">trace</span>    <span class="ss">(</span><span class="nv">MONTE_TRACE</span><span class="ss">)</span>
-<span class="mi">1000000</span>  <span class="nv">Maximum</span> <span class="nv">microstates</span> <span class="k">for</span> <span class="nv">analytical</span> <span class="nv">solution</span>        <span class="ss">(</span><span class="nv">NSTATE_MAX</span><span class="ss">)</span>
-<span class="nv">f</span>        <span class="nv">Specify</span> <span class="nv">mfe</span> <span class="nv">point</span>, <span class="nv">f</span><span class="o">=</span><span class="nv">pKa</span><span class="o">/</span><span class="nv">Em</span>                        <span class="ss">(</span><span class="nv">MFE_POINT</span><span class="ss">)</span>
-<span class="o">-</span><span class="mi">1</span>.<span class="mi">0</span>     <span class="nv">MFE</span> <span class="nv">cutoff</span><span class="ss">(</span><span class="nv">Kcal</span><span class="ss">)</span>, <span class="nv">default</span> <span class="mi">0</span>.<span class="mi">5</span>                      <span class="ss">(</span><span class="nv">MFE_CUTOFF</span><span class="ss">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>###  Only for Junjun&#39;s monte carlo
+2        Number of independent monte carlo sampling         (MONTE_RUNS)
+2000     Sampling = n_iter * confs                          (MONTE_NITER)
+20000    Trace energy each MONTE_TRACE steps, 0 no trace    (MONTE_TRACE)
+1000000  Maximum microstates for analytical solution        (NSTATE_MAX)
+f        Specify mfe point, f=pKa/Em                        (MFE_POINT)
+-1.0     MFE cutoff(Kcal), default 0.5                      (MFE_CUTOFF)
+</code></pre></div>
 More Monte Carlo simulation parameters.</p>
 <hr />
-<p><div class="codehilite"><pre><span></span>###  <span class="nv">Only</span> <span class="k">for</span> <span class="nv">Yifan</span><span class="s1">&#39;</span><span class="s">s monte carlo</span>
-<span class="nv">t</span>        <span class="nv">Using</span> <span class="nv">Yifan</span><span class="s1">&#39;</span><span class="s">s monte carlo                          (MONTE_ADV_OPT)</span>
-<span class="nv">f</span>        <span class="nv">Using</span> <span class="nv">format</span> <span class="nv">from</span> <span class="nv">old</span> <span class="nv">version</span>                      <span class="ss">(</span><span class="nv">MONTE_OLD_INPUT</span><span class="ss">)</span>
-<span class="mi">5000</span>     <span class="nv">Min</span> <span class="nv">Sampling</span> <span class="o">=</span> <span class="nv">n_iter</span> <span class="o">*</span> <span class="nv">confs</span>                      <span class="ss">(</span><span class="nv">MONTE_NITER_MIN</span><span class="ss">)</span>
-<span class="o">-</span><span class="mi">1</span>       <span class="nv">Max</span> <span class="nv">Sampling</span> <span class="o">=</span> <span class="nv">n_iter</span> <span class="o">*</span> <span class="nv">confs</span><span class="ss">(</span><span class="o">-</span><span class="mi">1</span> <span class="nv">stop</span> @ <span class="nv">converge</span><span class="ss">)</span>  <span class="ss">(</span><span class="nv">MONTE_NITER_MAX</span><span class="ss">)</span>
-<span class="mi">10000</span>    <span class="nv">Number</span> <span class="nv">of</span> <span class="nv">iterations</span> <span class="nv">each</span> <span class="nv">cycle</span>                    <span class="ss">(</span><span class="nv">MONTE_NITER_CYCLE</span><span class="ss">)</span>
-<span class="mi">1000</span>     <span class="nv">niter</span> <span class="o">*</span> <span class="nv">n_conf</span> <span class="nv">check</span> <span class="nv">convergence</span>                   <span class="ss">(</span><span class="nv">MONTE_NITER_CHK</span><span class="ss">)</span>
-<span class="o">-</span><span class="mi">1</span>       <span class="nv">Number</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">reduce</span> <span class="nv">steps</span><span class="ss">(</span><span class="o">-</span><span class="mi">1</span> <span class="nv">stop</span> @ <span class="nv">converge</span><span class="ss">)</span>     <span class="ss">(</span><span class="nv">MONTE_N_REDUCE</span><span class="ss">)</span>
-<span class="mi">0</span>.<span class="mi">01</span>     <span class="nv">Threshhold</span> <span class="k">for</span> <span class="nv">convergence</span>                         <span class="ss">(</span><span class="nv">MONTE_CONVERGE</span><span class="ss">)</span>
-<span class="nv">f</span>        <span class="nv">Calculate</span> <span class="nv">free</span> <span class="nv">energy</span>                              <span class="ss">(</span><span class="nv">MONTE_DO_ENERGY</span><span class="ss">)</span>
+<p><div class="highlight"><pre><span></span><code>###  Only for Yifan&#39;s monte carlo
+t        Using Yifan&#39;s monte carlo                          (MONTE_ADV_OPT)
+f        Using format from old version                      (MONTE_OLD_INPUT)
+5000     Min Sampling = n_iter * confs                      (MONTE_NITER_MIN)
+-1       Max Sampling = n_iter * confs(-1 stop @ converge)  (MONTE_NITER_MAX)
+10000    Number of iterations each cycle                    (MONTE_NITER_CYCLE)
+1000     niter * n_conf check convergence                   (MONTE_NITER_CHK)
+-1       Number of the reduce steps(-1 stop @ converge)     (MONTE_N_REDUCE)
+0.01     Threshhold for convergence                         (MONTE_CONVERGE)
+f        Calculate free energy                              (MONTE_DO_ENERGY)
 
-<span class="mi">298</span>.<span class="mi">15</span>   <span class="nv">Starting</span> <span class="nv">temperature</span> <span class="k">for</span> <span class="nv">annealling</span>                <span class="ss">(</span><span class="nv">ANNEAL_TEMP_START</span><span class="ss">)</span>
-<span class="mi">0</span>        <span class="nv">Number</span> <span class="nv">of</span> <span class="nv">steps</span> <span class="nv">of</span> <span class="nv">annealling</span>                      <span class="ss">(</span><span class="nv">ANNEAL_NSTEP</span><span class="ss">)</span>
-<span class="mi">1000</span>     <span class="nv">Number</span> <span class="nv">of</span> <span class="nv">iterations</span> <span class="k">for</span> <span class="nv">each</span> <span class="nv">annealling</span> <span class="nv">step</span>      <span class="ss">(</span><span class="nv">ANNEAL_NITER_STEP</span><span class="ss">)</span>
-</pre></div>
+298.15   Starting temperature for annealling                (ANNEAL_TEMP_START)
+0        Number of steps of annealling                      (ANNEAL_NSTEP)
+1000     Number of iterations for each annealling step      (ANNEAL_NITER_STEP)
+</code></pre></div>
 More Monte Carlo simulation parameters.</p>
 <hr />
 <h3 id="ipece-parameters">IPECE parameters<a class="headerlink" href="#ipece-parameters" title="Permanent link">&para;</a></h3>
 <hr />
-<p><div class="codehilite"><pre><span></span><span class="n">f</span> <span class="k">add</span> <span class="n">neutral</span> <span class="n">atoms</span> <span class="k">to</span> <span class="n">simulate</span> <span class="n">a</span> <span class="n">membrane</span> <span class="n">slab</span>         <span class="p">(</span><span class="n">IPECE_ADD_ME</span><span class="p">)</span>
-<span class="mi">33</span><span class="p">.</span> <span class="n">the</span> <span class="n">thichness</span> <span class="k">of</span> <span class="n">the</span> <span class="n">membrane</span> <span class="k">to</span> <span class="n">be</span> <span class="k">add</span>                 <span class="p">(</span><span class="n">IPECE_MEM_THICKNESS</span><span class="p">)</span>
-<span class="n">M</span> <span class="n">the</span> <span class="k">chain</span> <span class="n">ID</span> <span class="k">of</span> <span class="n">the</span> <span class="k">add</span> <span class="n">atoms</span>                 <span class="p">(</span><span class="n">IPECE_MEM_CHAINID</span><span class="p">)</span>
-</pre></div>
+<p><div class="highlight"><pre><span></span><code>f add neutral atoms to simulate a membrane slab         (IPECE_ADD_ME)
+33. the thichness of the membrane to be add                 (IPECE_MEM_THICKNESS)
+M the chain ID of the add atoms                 (IPECE_MEM_CHAINID)
+</code></pre></div>
 This is for creating a simulated membrane.</p>
 <hr />
                 
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2020-05-19
+    
+  </small>
+</div>
                   
                 
               
@@ -1135,34 +1165,34 @@ This is for creating a simulated membrane.</p>
 <footer class="md-footer">
   
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../tools/" title="Tools Program Reference" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+          <a href="../tools/" title="Tools Program Reference" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Tools Program Reference
-              </span>
+              </div>
             </div>
           </a>
         
         
-          <a href="../mcce2free/" title="Convert mcce tpl file" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
+          <a href="../mcce2free/" title="Convert mcce tpl file" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
                 Convert mcce tpl file
-              </span>
+              </div>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
             </div>
           </a>
         
@@ -1173,11 +1203,14 @@ This is for creating a simulated membrane.</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2020 Gunner Lab
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
       </div>
       
     </div>
@@ -1186,9 +1219,18 @@ This is for creating a simulated membrane.</p>
       
     </div>
     
-      <script src="../assets/javascripts/application.c648116f.js"></script>
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
