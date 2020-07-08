@@ -566,7 +566,7 @@
                 
                 
                 <h1 id="calculate-pkas-of-lysozyme">Calculate pKas of Lysozyme<a class="headerlink" href="#calculate-pkas-of-lysozyme" title="Permanent link">&para;</a></h1>
-<p><small><i>Page last updated on: 2020-06-18</i></small></p>
+<p><small><i>Page last updated on: 2020-07-07</i></small></p>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>Lysozyme is a small enzyme that dissolves bacterial cell walls thus kills bacteria. It was discovered as the first 
 antibiotic to inhibit bacteria growth in food, before penicillin.  </p>
@@ -574,16 +574,16 @@ antibiotic to inhibit bacteria growth in food, before penicillin.  </p>
 <p>Crystal structure of hen egg white lysozyme - PDB ID 3WUM</p>
 <p>The residue GLU 35 and ASP 52 have been identified as two active sites. The pKas of these two residues play an important
  role in the enzyme's activity. In order for lysozyme to attack the glucose molecule of the substrate, 
- GLU has high pKa and ASP 52 has low pKa. This way GLU 35 acts a proton donor, cuts the glucose with protonation of the 
+ GLU has high pKa and ASP 52 has low pKa. This way GLU 35 acts as a proton donor, cuts the glucose with protonation of the 
  glycosidic oxygen and a deprotonated ASP 52 stabilizes the highly charged intermediate, making the reaction easier.</p>
 <p><a href="https://www.ncbi.nlm.nih
 .gov/pmc/articles/PMC2323987/">Jens Erik Nielsen and J. Andrew McCammon, Protein Sci. 2003 Sep; 12(9): 1894–1901</a>  </p>
 <h2 id="prepare-the-calculation">Prepare the calculation<a class="headerlink" href="#prepare-the-calculation" title="Permanent link">&para;</a></h2>
-<p>After the program is installed and execution path is configured (see <a href="../quick/">link</a> for details), 
+<p>After the program is installed and the environment variable PATH is configured (see <a href="../quick/#configure-environment">link</a> for details), 
 make a working directory and go to the working directory. MCCE will generate intermediate files and result files in 
 the current directory, so it's best to prepare one directory for calculation on one structure.</p>
-<div class="highlight"><pre><span></span><code>mkdir 4lzt
-cd 4lzt
+<div class="highlight"><pre><span></span><code>$ mkdir 4lzt
+$ cd 4lzt
 </code></pre></div>
 
 <p>Then download pdb file 4LZT to the working directory:
@@ -595,7 +595,7 @@ Download completed.
 <h2 id="run-4-steps-of-mcce">Run 4 steps of MCCE<a class="headerlink" href="#run-4-steps-of-mcce" title="Permanent link">&para;</a></h2>
 <h3 id="step-1-convert-pdb-file-into-mcce-pdb">Step 1. Convert PDB file into MCCE PDB<a class="headerlink" href="#step-1-convert-pdb-file-into-mcce-pdb" title="Permanent link">&para;</a></h3>
 <p>This step proof reads the structure file and cut terminal residues and complex cofactors into smaller ones if necessary.
-<div class="highlight"><pre><span></span><code>step1.py 4LZT.pdb
+<div class="highlight"><pre><span></span><code>$ step1.py 4LZT.pdb
 </code></pre></div></p>
 <p>This command generates step1_out.pdb which is required of step 2.</p>
 <p>If you want to know the help information and other options of this command:
@@ -603,7 +603,7 @@ Download completed.
 </code></pre></div></p>
 <h3 id="step-2-make-side-chain-conformers">Step 2. Make side chain conformers<a class="headerlink" href="#step-2-make-side-chain-conformers" title="Permanent link">&para;</a></h3>
 <p>This step makes alternative side chain locations and ionization states.</p>
-<div class="highlight"><pre><span></span><code>step2.py
+<div class="highlight"><pre><span></span><code>$ step2.py
 </code></pre></div>
 
 <p>This command generates step2_out.pdb which is required of step 3.</p>
@@ -612,7 +612,7 @@ Download completed.
 </code></pre></div></p>
 <h3 id="step-3-make-energy-table">Step 3. Make energy table<a class="headerlink" href="#step-3-make-energy-table" title="Permanent link">&para;</a></h3>
 <p>This step calculates conformer self energy and pairwise interaction table.</p>
-<div class="highlight"><pre><span></span><code>step3.py
+<div class="highlight"><pre><span></span><code>$ step3.py
 </code></pre></div>
 
 <p>This command generates opp files under energies/ folder and file head3.lst which are required of step 4.</p>
@@ -620,8 +620,8 @@ Download completed.
 <div class="highlight"><pre><span></span><code>$ step3.py -h
 </code></pre></div></p>
 <h3 id="step-4-simulate-a-titration-with-monte-carlo-sampling">Step 4. Simulate a titration with Monte Carlo sampling<a class="headerlink" href="#step-4-simulate-a-titration-with-monte-carlo-sampling" title="Permanent link">&para;</a></h3>
-<p>This setp simulates a titration and write out the conformation and ionization states of each side chain at various conditions.</p>
-<div class="highlight"><pre><span></span><code>step4.py --xts
+<p>This step simulates a titration and writes out the conformation and ionization states of each side chain at various conditions.</p>
+<div class="highlight"><pre><span></span><code>$ step4.py --xts
 </code></pre></div>
 
 <ul>
@@ -631,15 +631,15 @@ Download completed.
 </ul>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
 <p>The pKa report is in file pK.out.</p>
-<div class="highlight"><pre><span></span><code>cat pK.out
+<div class="highlight"><pre><span></span><code>$ cat pK.out
 </code></pre></div>
 
 <p>From the result, GLU 35 (pKa = 5.13) has a higher pKa than ASP 52 (pKa = 3.33).</p>
 <p>To analyze the ionization energy of an ionizable residue at the mid point pH=5.13 with pairwise cutoff 0.1:
-<div class="highlight"><pre><span></span><code>mfe.py ASP-A0052_ -c 0.1
+<div class="highlight"><pre><span></span><code>$ mfe.py ASP-A0052_ -c 0.1
 </code></pre></div></p>
 <p>To analyze the ionization energy of this residue pH 7 with pairwise cutoff 0.1:
-<div class="highlight"><pre><span></span><code>mfe.py ASP-A0052_  -p 7 -c 0.1
+<div class="highlight"><pre><span></span><code>$ mfe.py ASP-A0052_  -p 7 -c 0.1
 </code></pre></div></p>
                 
                   
@@ -649,7 +649,7 @@ Download completed.
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-06-18
+      Last update: 2020-07-07
     
   </small>
 </div>

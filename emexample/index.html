@@ -566,7 +566,7 @@
                 
                 
                 <h1 id="calculate-em-of-heme-in-cytochrome">Calculate Em of heme in Cytochrome<a class="headerlink" href="#calculate-em-of-heme-in-cytochrome" title="Permanent link">&para;</a></h1>
-<p><small><i>Page last updated on: 2020-06-18</i></small></p>
+<p><small><i>Page last updated on: 2020-07-07</i></small></p>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>Cytochrome c is a small protein that transports electron in mitochondria to facilitate the synthesis of ATP. It redox potential plays an imprtant role in its function. The regulation of the Cytochrome C redox potential can be explained by Continuum Electrostatic analysis.</p>
 <p><em><a href="https://pubs.acs.org/doi/full/10.1021/bi027288k">Junjun Mao, Karin Hauser, and M. R. Gunner, How Cytochromes with Different Folds Control Heme Redox Potentials, Biochemistry 2003, 42, 33, 9829–9840</a></em></p>
@@ -575,8 +575,8 @@
 <p>After the program is installed and execution path is configured (see <a href="../quick/">link</a> for details),
 make a working directory and go to the working directory. MCCE will generate intermediate files and result files in
 the current directory, so it's best to prepare one directory for calculation on one structure.</p>
-<div class="highlight"><pre><span></span><code>mkdir 1akk
-cd 1akk
+<div class="highlight"><pre><span></span><code>$ mkdir 1akk
+$ cd 1akk
 </code></pre></div>
 
 <p>Then download pdb file 1AKK to the working directory:
@@ -589,10 +589,10 @@ Download completed.
 <h3 id="step-1-convert-pdb-file-into-mcce-pdb">Step 1. Convert PDB file into MCCE PDB<a class="headerlink" href="#step-1-convert-pdb-file-into-mcce-pdb" title="Permanent link">&para;</a></h3>
 <p>This step proof reads the structure file and cut terminal residues and complex cofactors into smaller ones if necessary.</p>
 <p>The heme in cytochrome C has two ligands HIS18 and MET80. They behave differently than HIS and MET so we have to rename them. Copy name.txt from the MCCE directoy to working directory.
-<div class="highlight"><pre><span></span><code>cp /path/to/mcce/name.txt ./
+<div class="highlight"><pre><span></span><code>$ cp /path/to/mcce/name.txt ./
 </code></pre></div></p>
-<p>Your /path/to/mcce/ can be found by running</p>
-<div class="highlight"><pre><span></span><code>var=`which mcce`; echo ${var%/*/*}
+<p>Your /path/to/mcce can be found by running</p>
+<div class="highlight"><pre><span></span><code>$ var=`which mcce`; echo ${var%/*/*}
 </code></pre></div>
 
 <p>Now that you have a name.txt in your working directory, add these two lines to ./name.txt:
@@ -600,7 +600,7 @@ Download completed.
 *****MET**  80  *****MEL**  80
 </code></pre></div></p>
 <p>Then run step 1:
-<div class="highlight"><pre><span></span><code>step1.py -u RENAME_RULES=./name.txt 1AKK.pdb
+<div class="highlight"><pre><span></span><code>$ step1.py -u RENAME_RULES=./name.txt 1AKK.pdb
 </code></pre></div></p>
 <p>The reason we specify the location is to force mcce to use our own renaming rules instead of the default one.</p>
 <p>This command generates step1_out.pdb which is required of step 2.</p>
@@ -609,7 +609,7 @@ Download completed.
 </code></pre></div></p>
 <h3 id="step-2-make-side-chain-conformers">Step 2. Make side chain conformers<a class="headerlink" href="#step-2-make-side-chain-conformers" title="Permanent link">&para;</a></h3>
 <p>This step makes alternative side chain locations and ionization states.</p>
-<div class="highlight"><pre><span></span><code>step2.py
+<div class="highlight"><pre><span></span><code>$ step2.py
 </code></pre></div>
 
 <p>This command generates step2_out.pdb which is required of step 3.</p>
@@ -618,7 +618,7 @@ Download completed.
 </code></pre></div></p>
 <h3 id="step-3-make-energy-table">Step 3. Make energy table<a class="headerlink" href="#step-3-make-energy-table" title="Permanent link">&para;</a></h3>
 <p>This step calculates conformer self energy and pairwise interaction table.</p>
-<div class="highlight"><pre><span></span><code>step3.py
+<div class="highlight"><pre><span></span><code>$ step3.py
 </code></pre></div>
 
 <p>This command generates opp files under energies/ folder and file head3.lst which are required of step 4.</p>
@@ -627,7 +627,7 @@ Download completed.
 </code></pre></div></p>
 <h3 id="step-4-simulate-a-titration-with-monte-carlo-sampling">Step 4. Simulate a titration with Monte Carlo sampling<a class="headerlink" href="#step-4-simulate-a-titration-with-monte-carlo-sampling" title="Permanent link">&para;</a></h3>
 <p>This setp simulates a titration and write out the conformation and ionization states of each side chain at various conditions.</p>
-<div class="highlight"><pre><span></span><code>step4.py -i 0 -d 60 -t eh
+<div class="highlight"><pre><span></span><code>$ step4.py -i 0 -d 60 -t eh
 </code></pre></div>
 
 <ul>
@@ -637,12 +637,12 @@ Download completed.
 </ul>
 <h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
 <p>The pKa report is in file pK.out.</p>
-<div class="highlight"><pre><span></span><code>cat pK.out
+<div class="highlight"><pre><span></span><code>$ cat pK.out
 </code></pre></div>
 
 <p>Your will see the calculated Eh for heme is 247 mV</p>
 <p>To analyze the ionization energy of heme at the midpoint:
-<div class="highlight"><pre><span></span><code>mfe.py HEM+A0105_
+<div class="highlight"><pre><span></span><code>$ mfe.py HEM+A0105_
 </code></pre></div></p>
                 
                   
@@ -652,7 +652,7 @@ Download completed.
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-06-18
+      Last update: 2020-07-07
     
   </small>
 </div>

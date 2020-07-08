@@ -1004,19 +1004,19 @@
                 
                 
                 <h1 id="how-to-contribute-code-using-git">How to contribute code using git<a class="headerlink" href="#how-to-contribute-code-using-git" title="Permanent link">&para;</a></h1>
-<p><small><i>Page last updated on: 2020-07-02</i></small></p>
+<p><small><i>Page last updated on: 2020-07-07</i></small></p>
 <h2 id="part-1-one-time-set-up">Part 1. One-time set up<a class="headerlink" href="#part-1-one-time-set-up" title="Permanent link">&para;</a></h2>
 <h3 id="identity">Identity:<a class="headerlink" href="#identity" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git config --global user.name &quot;&lt;Your Name&gt;&quot;  
-git config --global user.email &lt;your email&gt;
+<div class="highlight"><pre><span></span><code>$ git config --global user.name &quot;&lt;Your Name&gt;&quot;  
+$ git config --global user.email &lt;your email&gt;
 </code></pre></div>
 
 <h3 id="save-credential-for-6-hours">Save credential for 6 hours:<a class="headerlink" href="#save-credential-for-6-hours" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git config --global credential.helper &#39;cache --timeout=21600&#39;
+<div class="highlight"><pre><span></span><code>$ git config --global credential.helper &#39;cache --timeout=21600&#39;
 </code></pre></div>
 
 <h3 id="save-credential-permanently">Save credential permanently:<a class="headerlink" href="#save-credential-permanently" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git config --global credential.helper store
+<div class="highlight"><pre><span></span><code>$ git config --global credential.helper store
 </code></pre></div>
 
 <h3 id="alias-of-showing-git-history">Alias of showing git history:<a class="headerlink" href="#alias-of-showing-git-history" title="Permanent link">&para;</a></h3>
@@ -1029,37 +1029,37 @@ lg = log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h
 <p><img alt="git picture" src="../img/git.png" /></p>
 <h3 id="clone-a-remote-repo">Clone a remote repo:<a class="headerlink" href="#clone-a-remote-repo" title="Permanent link">&para;</a></h3>
 <p>Clone a remote repo to local computer:
-<div class="highlight"><pre><span></span><code>git clone &lt;url&gt;
+<div class="highlight"><pre><span></span><code>$ git clone &lt;url&gt;
 </code></pre></div></p>
 <h3 id="convert-a-local-directory">Convert a local directory:<a class="headerlink" href="#convert-a-local-directory" title="Permanent link">&para;</a></h3>
 <p>Convert an existing local directory to local git repository:
-<div class="highlight"><pre><span></span><code>git init
+<div class="highlight"><pre><span></span><code>$ git init
 </code></pre></div></p>
 <h2 id="part-3-single-line-development">Part 3. Single line development:<a class="headerlink" href="#part-3-single-line-development" title="Permanent link">&para;</a></h2>
 <p><img src="data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%271.0%27%20encoding%3D%27UTF-8%27%3F%3E%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.0//EN%22%20%22http%3A//www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd%22%3E%0A%3Csvg%20viewBox%3D%220%200%20832%20120%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Ainkspace%3D%22http%3A//www.inkscape.org/namespaces/inkscape%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%3E%0A%20%20%3Cdefs%20id%3D%22defs_block%22%3E%0A%20%20%20%20%3Cfilter%20height%3D%221.504%22%20id%3D%22filter_blur%22%20inkspace%3Acollect%3D%22always%22%20width%3D%221.1575%22%20x%3D%22-0.07875%22%20y%3D%22-0.252%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20id%3D%22feGaussianBlur3780%22%20inkspace%3Acollect%3D%22always%22%20stdDeviation%3D%224.2%22%20/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Ctitle%3Eblockdiag%3C/title%3E%0A%20%20%3Cdesc%20/%3E%0A%20%20%3Cellipse%20cx%3D%22131%22%20cy%3D%2266%22%20fill%3D%22rgb%280%2C0%2C0%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20style%3D%22filter%3Aurl%28%23filter_blur%29%3Bopacity%3A0.7%3Bfill-opacity%3A1%22%20/%3E%0A%20%20%3Cellipse%20cx%3D%22323%22%20cy%3D%2266%22%20fill%3D%22rgb%280%2C0%2C0%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20style%3D%22filter%3Aurl%28%23filter_blur%29%3Bopacity%3A0.7%3Bfill-opacity%3A1%22%20/%3E%0A%20%20%3Cellipse%20cx%3D%22515%22%20cy%3D%2266%22%20fill%3D%22rgb%280%2C0%2C0%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20style%3D%22filter%3Aurl%28%23filter_blur%29%3Bopacity%3A0.7%3Bfill-opacity%3A1%22%20/%3E%0A%20%20%3Cellipse%20cx%3D%22707%22%20cy%3D%2266%22%20fill%3D%22rgb%280%2C0%2C0%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20style%3D%22filter%3Aurl%28%23filter_blur%29%3Bopacity%3A0.7%3Bfill-opacity%3A1%22%20/%3E%0A%20%20%3Cellipse%20cx%3D%22128%22%20cy%3D%2260%22%20fill%3D%22rgb%28255%2C255%2C255%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Ctext%20fill%3D%22rgb%280%2C0%2C0%29%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20font-style%3D%22normal%22%20font-weight%3D%22normal%22%20text-anchor%3D%22middle%22%20textLength%3D%2221%22%20x%3D%22128.5%22%20y%3D%2270%22%3EC1%3C/text%3E%0A%20%20%3Cellipse%20cx%3D%22320%22%20cy%3D%2260%22%20fill%3D%22rgb%28255%2C255%2C255%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Ctext%20fill%3D%22rgb%280%2C0%2C0%29%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20font-style%3D%22normal%22%20font-weight%3D%22normal%22%20text-anchor%3D%22middle%22%20textLength%3D%2221%22%20x%3D%22320.5%22%20y%3D%2270%22%3EC2%3C/text%3E%0A%20%20%3Cellipse%20cx%3D%22512%22%20cy%3D%2260%22%20fill%3D%22rgb%28255%2C255%2C255%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Ctext%20fill%3D%22rgb%280%2C0%2C0%29%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20font-style%3D%22normal%22%20font-weight%3D%22normal%22%20text-anchor%3D%22middle%22%20textLength%3D%2221%22%20x%3D%22512.5%22%20y%3D%2270%22%3EC3%3C/text%3E%0A%20%20%3Cellipse%20cx%3D%22704%22%20cy%3D%2260%22%20fill%3D%22rgb%28255%2C255%2C255%29%22%20rx%3D%2224.0%22%20ry%3D%2224.0%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Ctext%20fill%3D%22rgb%280%2C0%2C0%29%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%20font-style%3D%22normal%22%20font-weight%3D%22normal%22%20text-anchor%3D%22middle%22%20textLength%3D%2221%22%20x%3D%22704.5%22%20y%3D%2270%22%3EC4%3C/text%3E%0A%20%20%3Cpath%20d%3D%22M%20152%2060%20L%20288%2060%22%20fill%3D%22none%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Cpolygon%20fill%3D%22rgb%280%2C0%2C0%29%22%20points%3D%22295%2C60%20288%2C56%20288%2C64%20295%2C60%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Cpath%20d%3D%22M%20344%2060%20L%20480%2060%22%20fill%3D%22none%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Cpolygon%20fill%3D%22rgb%280%2C0%2C0%29%22%20points%3D%22487%2C60%20480%2C56%20480%2C64%20487%2C60%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Cpath%20d%3D%22M%20536%2060%20L%20672%2060%22%20fill%3D%22none%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%20%20%3Cpolygon%20fill%3D%22rgb%280%2C0%2C0%29%22%20points%3D%22679%2C60%20672%2C56%20672%2C64%20679%2C60%22%20stroke%3D%22rgb%280%2C0%2C0%29%22%20/%3E%0A%3C/svg%3E%0A" /></p>
 <h3 id="add-all-files-to-track">Add all files to track:<a class="headerlink" href="#add-all-files-to-track" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git add .
+<div class="highlight"><pre><span></span><code>$ git add .
 </code></pre></div>
 
 <h3 id="check-status">Check status:<a class="headerlink" href="#check-status" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git status
+<div class="highlight"><pre><span></span><code>$ git status
 </code></pre></div>
 
 <h3 id="commit">Commit:<a class="headerlink" href="#commit" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git commit -a -m &quot;&lt;commit message&gt;&quot;
+<div class="highlight"><pre><span></span><code>$ git commit -a -m &quot;&lt;commit message&gt;&quot;
 </code></pre></div>
 
 <h3 id="add-a-file-to-track">Add a file to track:<a class="headerlink" href="#add-a-file-to-track" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git add &lt;file name&gt;
+<div class="highlight"><pre><span></span><code>$ git add &lt;file name&gt;
 </code></pre></div>
 
 <h3 id="show-history">Show history:<a class="headerlink" href="#show-history" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>git lg
+<p><div class="highlight"><pre><span></span><code>$ git lg
 </code></pre></div>
 <em><a href="#alias-of-showing-git-history">It requires you set up the “lg” alias in ~/.gitconfig</a></em></p>
 <h2 id="part-4-go-to-past-commits">Part 4. Go to past commits<a class="headerlink" href="#part-4-go-to-past-commits" title="Permanent link">&para;</a></h2>
 <p><strong>Create a new branch and revert to a past commit:</strong>
-<div class="highlight"><pre><span></span><code>git checkout -b &lt;new branch&gt; &lt;commit hash&gt;
+<div class="highlight"><pre><span></span><code>$ git checkout -b &lt;new branch&gt; &lt;commit hash&gt;
 </code></pre></div></p>
 <p><code>&lt;new branch&gt;</code> is a branch name you make.</p>
 <p><code>&lt;commit hash&gt;</code> is the string as reported by git log</p>
@@ -1067,89 +1067,89 @@ lg = log --graph --abbrev-commit --decorate --format=format:&#39;%C(bold blue)%h
 <ol>
 <li>
 <p>make sure your are in the new branch
-<div class="highlight"><pre><span></span><code>git checkout &lt;new branch&gt;
+<div class="highlight"><pre><span></span><code>$ git checkout &lt;new branch&gt;
 </code></pre></div></p>
 </li>
 <li>
 <p>force master to merge with current branch and use current branch as favored:
-<div class="highlight"><pre><span></span><code>git merge -s ours master
+<div class="highlight"><pre><span></span><code>$ git merge -s ours master
 </code></pre></div></p>
 </li>
 <li>
 <p>go to the master branch and reconcile again:
-<div class="highlight"><pre><span></span><code>git checkout master
-git merge &lt;new branch&gt;
+<div class="highlight"><pre><span></span><code>$ git checkout master
+$ git merge &lt;new branch&gt;
 </code></pre></div></p>
 </li>
 <li>
 <p>after merge, delete the branch.
-<div class="highlight"><pre><span></span><code>git branch -d &lt;new branch&gt;
+<div class="highlight"><pre><span></span><code>$ git branch -d &lt;new branch&gt;
 </code></pre></div></p>
 </li>
 </ol>
 <h2 id="part-5-multi-line-development">Part 5. Multi-line development<a class="headerlink" href="#part-5-multi-line-development" title="Permanent link">&para;</a></h2>
 <h3 id="show-branches">Show branches:<a class="headerlink" href="#show-branches" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git branch
+<div class="highlight"><pre><span></span><code>$ git branch
 </code></pre></div>
 
 <h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>Show remote branches:
-<div class="highlight"><pre><span></span><code>git branch -r
+<div class="highlight"><pre><span></span><code>$ git branch -r
 </code></pre></div></p>
 <h3 id="switch-between-branches">Switch between branches:<a class="headerlink" href="#switch-between-branches" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git checkout &lt;branch name&gt;
+<div class="highlight"><pre><span></span><code>$ git checkout &lt;branch name&gt;
 </code></pre></div>
 
 <h3 id="create-and-switch-branch">Create and switch branch:<a class="headerlink" href="#create-and-switch-branch" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git checkout -b &lt;branch name&gt;
+<div class="highlight"><pre><span></span><code>$ git checkout -b &lt;branch name&gt;
 </code></pre></div>
 
 <h3 id="merge-branches">Merge branches:<a class="headerlink" href="#merge-branches" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git merge &lt;another branch&gt;
+<div class="highlight"><pre><span></span><code>$ git merge &lt;another branch&gt;
 </code></pre></div>
 
 <p>This will merge a branch to current branch:</p>
 <h3 id="merge-with-current-favored">Merge with current favored:<a class="headerlink" href="#merge-with-current-favored" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git merge -s ours &lt;another branch&gt;
+<div class="highlight"><pre><span></span><code>$ git merge -s ours &lt;another branch&gt;
 </code></pre></div>
 
 <h3 id="delete-branches">Delete branches<a class="headerlink" href="#delete-branches" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git branch -d &lt;branch name&gt;
+<div class="highlight"><pre><span></span><code>$ git branch -d &lt;branch name&gt;
 </code></pre></div>
 
 <h3 id="force-delete">Force delete:<a class="headerlink" href="#force-delete" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git branch -D &lt;branch name&gt;
+<div class="highlight"><pre><span></span><code>$ git branch -D &lt;branch name&gt;
 </code></pre></div>
 
 <h2 id="part-6-sync-remote-and-local">Part 6. Sync remote and local<a class="headerlink" href="#part-6-sync-remote-and-local" title="Permanent link">&para;</a></h2>
 <h3 id="check-remote">Check remote:<a class="headerlink" href="#check-remote" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>git remote -v
+<p><div class="highlight"><pre><span></span><code>$ git remote -v
 </code></pre></div>
 “origin” is the default name of your first remote.</p>
 <h3 id="add-more-remotes">Add more remotes:<a class="headerlink" href="#add-more-remotes" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git remote add &lt;remote&gt; &lt;url&gt;
+<div class="highlight"><pre><span></span><code>$ git remote add &lt;remote&gt; &lt;url&gt;
 </code></pre></div>
 
 <h3 id="pull-from-remote-repo">Pull from remote repo:<a class="headerlink" href="#pull-from-remote-repo" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>git pull
+<p><div class="highlight"><pre><span></span><code>$ git pull
 </code></pre></div>
 Or
-<div class="highlight"><pre><span></span><code>git pull &lt;remote&gt; &lt;branch&gt;
+<div class="highlight"><pre><span></span><code>$ git pull &lt;remote&gt; &lt;branch&gt;
 </code></pre></div></p>
 <h3 id="push-to-remote">Push to remote:<a class="headerlink" href="#push-to-remote" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git push
+<div class="highlight"><pre><span></span><code>$ git push
 </code></pre></div>
 
 <h3 id="push-new-local-branch-to-remote">Push new local branch to remote:<a class="headerlink" href="#push-new-local-branch-to-remote" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git push -u &lt;remote&gt; &lt;branch&gt;
+<div class="highlight"><pre><span></span><code>$ git push -u &lt;remote&gt; &lt;branch&gt;
 </code></pre></div>
 
 <h3 id="delete-remote-branch">Delete remote branch:<a class="headerlink" href="#delete-remote-branch" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git push &lt;remote&gt; --delete &lt;branch&gt;
+<div class="highlight"><pre><span></span><code>$ git push &lt;remote&gt; --delete &lt;branch&gt;
 </code></pre></div>
 
 <h3 id="delete-remote-tracking-branch">Delete remote tracking branch:<a class="headerlink" href="#delete-remote-tracking-branch" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git remote prune &lt;remote&gt;
+<div class="highlight"><pre><span></span><code>$ git remote prune &lt;remote&gt;
 </code></pre></div>
 
 <h2 id="part-7-merge-branches">Part 7. Merge branches<a class="headerlink" href="#part-7-merge-branches" title="Permanent link">&para;</a></h2>
@@ -1157,24 +1157,24 @@ Or
 <ul>
 <li>
 <p>Start a new feature:
-<div class="highlight"><pre><span></span><code>git checkout -b new-feature
+<div class="highlight"><pre><span></span><code>$ git checkout -b new-feature
 </code></pre></div></p>
 </li>
 <li>
 <p>Edit some files, then commit the change:
-<div class="highlight"><pre><span></span><code>git commit -a -m &quot;Start a feature&quot;  
+<div class="highlight"><pre><span></span><code>$ git commit -a -m &quot;Start a feature&quot;  
 </code></pre></div></p>
 </li>
 <li>
 <p>Edit some files, then commit more changes:
-<div class="highlight"><pre><span></span><code>git commit -a -m &quot;Finish a feature&quot;  
+<div class="highlight"><pre><span></span><code>$ git commit -a -m &quot;Finish a feature&quot;  
 </code></pre></div></p>
 </li>
 <li>
 <p>Merge in the new-feature branch:
-<div class="highlight"><pre><span></span><code>git checkout master 
-git merge new-feature 
-git branch -d new-feature
+<div class="highlight"><pre><span></span><code>$ git checkout master 
+$ git merge new-feature 
+$ git branch -d new-feature
 </code></pre></div></p>
 </li>
 </ul>
@@ -1188,7 +1188,7 @@ conflicting text in merging branch
 </code></pre></div></p>
 <p>You need to edit text and remove &lt;&lt;&lt;&lt;&lt;&lt;, ======, &gt;&gt;&gt;&gt;&gt;&gt; lines.</p>
 <p>Then run a commit:
-<div class="highlight"><pre><span></span><code>git commit -a -m &quot;&lt;commit message&gt;&quot;
+<div class="highlight"><pre><span></span><code>$ git commit -a -m &quot;&lt;commit message&gt;&quot;
 </code></pre></div></p>
                 
                   
@@ -1198,7 +1198,7 @@ conflicting text in merging branch
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-07-02
+      Last update: 2020-07-07
     
   </small>
 </div>

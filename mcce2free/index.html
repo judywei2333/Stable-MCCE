@@ -498,27 +498,35 @@
                 
                 
                 <h1 id="how-to-convert-an-existing-mcce-tpl-file-to-free-format-tpl-file">How to convert an existing mcce tpl file to free format tpl file?<a class="headerlink" href="#how-to-convert-an-existing-mcce-tpl-file-to-free-format-tpl-file" title="Permanent link">&para;</a></h1>
-<p><small><i>Page last updated on: 2020-02-16</i></small></p>
+<p><small><i>Page last updated on: 2020-07-07</i></small></p>
 <p>There accumulated a big number of mcce tpl files (topology file of a molecule) which defines the conformers, atoms, connectivity and so on. Since mcce tpl file follows strict format, new mcce adopted a <a href="../newftpl/">free format</a> to save the same information. Follow these steps to convert an existing mcce tpl file to a new free format tpl file.</p>
 <p>This example is assuming you convert a mcce tpl file glu.tpl in param04 directory.</p>
 <h2 id="convert">Convert<a class="headerlink" href="#convert" title="Permanent link">&para;</a></h2>
 <p>Run this command to convert mcce format to free format.</p>
-<p><code>bin/tpl-mcce2free.py param04/glu.tpl &gt; glu.ftpl</code></p>
+<div class="highlight"><pre><span></span><code>$ bin/tpl-mcce2free.py param04/glu.tpl &gt; glu.ftpl
+</code></pre></div>
+
 <p>The above output file has most entries converted. </p>
 <h2 id="fix-rxn-record">Fix "rxn" record<a class="headerlink" href="#fix-rxn-record" title="Permanent link">&para;</a></h2>
 <p>Then we can manually compile rxn values in CONFORMER records. First manually replace <code>rxn=</code> with <code>rxn02=</code>, <code>rxn04=</code>, <code>rxn08=</code> depending on the dielectric constant of the tpl file that was converted from.</p>
-<p><code>CONFORMER, GLU01: Em0=   0.0, pKa0=  0.00, ne= 0, nH= 0, rxn02= -6.410, rxn04= -3.100, rxn08= -1.390</code></p>
+<div class="highlight"><pre><span></span><code>CONFORMER, GLU01: Em0=   0.0, pKa0=  0.00, ne= 0, nH= 0, rxn02= -6.410, rxn04= -3.100, rxn08= -1.390
+</code></pre></div>
+
 <h2 id="error-check">Error check<a class="headerlink" href="#error-check" title="Permanent link">&para;</a></h2>
 <p>Now find the atom name difference, especially H atoms. PDB is using version 3 names and old mcce is using version 2 names. For GLU, the name comparison can be found at <a href="http://ligand-expo.rcsb.org/pyapps/ldHandler.py?formid=cc-index-search&amp;target=glu&amp;operation=ccid">here</a>.</p>
 <p>If you have a pdb file of the residue/ligand, we can test the ftpl file against that pdb file:</p>
-<p><code>bin/verify_tpl.py ftplfile pdbfile</code></p>
+<div class="highlight"><pre><span></span><code>$ bin/verify_tpl.py ftplfile pdbfile 
+</code></pre></div>
+
 <p>It will report any atoms that can not be loaded by the converted ftpl file definition.</p>
 <p>To change the name in ftpl file, glu.ftp for example:</p>
-<p><code>sed -i 's/1HB / HB2/g' glu.ftpl</code></p>
+<div class="highlight"><pre><span></span><code>$ sed -i &#39;s/1HB / HB2/g&#39; glu.ftpl 
+</code></pre></div>
+
 <p>You can verify the ftpl file again after the change of names.</p>
 <h2 id="store-in-param-directory">Store in <code>param</code> directory<a class="headerlink" href="#store-in-param-directory" title="Permanent link">&para;</a></h2>
 <p>Finally, place the tested ftpl file under MCCE distribution's "param" directory.</p>
-<p>The MCCE distribution directory is the the <code>(HOME)</code> line in your run.prm.</p>
+<p>The MCCE distribution directory is the <code>(HOME)</code> line in your run.prm.</p>
                 
                   
                     
@@ -527,7 +535,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-02-16
+      Last update: 2020-07-07
     
   </small>
 </div>

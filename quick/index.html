@@ -212,6 +212,33 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilers-c-gfortran" class="md-nav__link">
+    Compilers: C, gfortran
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-and-modules" class="md-nav__link">
+    Python and modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-the-code" class="md-nav__link">
     Get the code
   </a>
@@ -220,8 +247,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#to-download-the-latest-code" class="md-nav__link">
-    To download the latest code:
+  <a href="#download-the-latest-code" class="md-nav__link">
+    Download the latest code
   </a>
   
 </li>
@@ -233,22 +260,9 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-requirement" class="md-nav__link">
-    Python requirement
-  </a>
-  
-    <nav class="md-nav" aria-label="Python requirement">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#install-python-package-manager-miniconda" class="md-nav__link">
-    Install Python package manager Miniconda
+  <a href="#configure-environment" class="md-nav__link">
+    Configure environment
   </a>
   
 </li>
@@ -259,11 +273,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-mcce-in-simplest-way" class="md-nav__link">
-    Run MCCE in simplest way
+  <a href="#run-mcce" class="md-nav__link">
+    Run MCCE
   </a>
   
-    <nav class="md-nav" aria-label="Run MCCE in simplest way">
+    <nav class="md-nav" aria-label="Run MCCE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -533,6 +547,33 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilers-c-gfortran" class="md-nav__link">
+    Compilers: C, gfortran
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-and-modules" class="md-nav__link">
+    Python and modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-the-code" class="md-nav__link">
     Get the code
   </a>
@@ -541,8 +582,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#to-download-the-latest-code" class="md-nav__link">
-    To download the latest code:
+  <a href="#download-the-latest-code" class="md-nav__link">
+    Download the latest code
   </a>
   
 </li>
@@ -554,22 +595,9 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-requirement" class="md-nav__link">
-    Python requirement
-  </a>
-  
-    <nav class="md-nav" aria-label="Python requirement">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#install-python-package-manager-miniconda" class="md-nav__link">
-    Install Python package manager Miniconda
+  <a href="#configure-environment" class="md-nav__link">
+    Configure environment
   </a>
   
 </li>
@@ -580,11 +608,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-mcce-in-simplest-way" class="md-nav__link">
-    Run MCCE in simplest way
+  <a href="#run-mcce" class="md-nav__link">
+    Run MCCE
   </a>
   
-    <nav class="md-nav" aria-label="Run MCCE in simplest way">
+    <nav class="md-nav" aria-label="Run MCCE">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -658,39 +686,48 @@
                 
                 
                 <h1 id="mcce-quick-start">MCCE quick start<a class="headerlink" href="#mcce-quick-start" title="Permanent link">&para;</a></h1>
-<p><small><i>Page last updated on: 2020-07-01</i></small></p>
+<p><small><i>Page last updated on: 2020-07-07</i></small></p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="compilers-c-gfortran">Compilers: C, gfortran<a class="headerlink" href="#compilers-c-gfortran" title="Permanent link">&para;</a></h3>
+<p>The C and gfortran compilers usually come with your operating system. If not, use the package manager to install.</p>
+<div class="admonition note">
+<p class="admonition-title">On Ubuntu Linux:</p>
+<div class="highlight"><pre><span></span><code>$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install build-essential
+$ sudo apt-get install gfortran
+</code></pre></div>
+
+</div>
+<div class="admonition note">
+<p class="admonition-title">On Mac OS X:</p>
+<p>For Mac users, the gcc compiler comes with Xcode from the App store. Once Xcode is installed, install command line tools. This provides gcc.</p>
+<p>Gfortran is avalaible from <a href="https://github.com/fxcoudert/gfortran-for-macOS/releases">https://github.com/fxcoudert/gfortran-for-macOS/releases</a>, find your Mac OS X version and install appropriate gfortran package.</p>
+</div>
+<h3 id="python-and-modules">Python and modules<a class="headerlink" href="#python-and-modules" title="Permanent link">&para;</a></h3>
+<p>We need Python3 and modules: numpy, scipy, matplotlib, pandas, and openpyxl</p>
+<ul>
+<li>Install Miniconda: <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></li>
+<li>After installing Miniconda, install these modules:
+<div class="highlight"><pre><span></span><code>conda install numpy scipy matplotlib pandas openpyxl
+</code></pre></div></li>
+</ul>
 <h2 id="get-the-code">Get the code<a class="headerlink" href="#get-the-code" title="Permanent link">&para;</a></h2>
-<h3 id="to-download-the-latest-code">To download the latest code:<a class="headerlink" href="#to-download-the-latest-code" title="Permanent link">&para;</a></h3>
+<h3 id="download-the-latest-code">Download the latest code<a class="headerlink" href="#download-the-latest-code" title="Permanent link">&para;</a></h3>
 <p>Under a terminal window, run:</p>
 <div class="codehilite"><pre><span></span><code><span class="err">git clone https://github.com/GunnerLab/Stable-MCCE.git</span>
 </code></pre></div>
 
 
 <h3 id="compile-the-code">Compile the code:<a class="headerlink" href="#compile-the-code" title="Permanent link">&para;</a></h3>
-<p>This creates a directory Stable-MCCE, enter the directory and compile:</p>
-<p>You need C and Fortran to compile the code.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For Mac users, gcc compiler comes with Xcode from app store. Once Xcode is installed, install command line tools. This provides gcc.</p>
-<p>Gfortran is avalaible from <a href="https://github.com/fxcoudert/gfortran-for-macOS/releases">https://github.com/fxcoudert/gfortran-for-macOS/releases</a>, find your Mac OS X version and install appropriate gfortran package.</p>
-</div>
-<div class="highlight"><pre><span></span><code>cd Stable-MCCE
-make clean
-make
+<p>The above command creates a directory named Stable-MCCE, enter the directory and compile:</p>
+<div class="highlight"><pre><span></span><code>$ cd Stable-MCCE
+$ make clean
+$ make
 </code></pre></div>
 
-<p>Find the path of Stable-MCCE installation directory:
-<div class="highlight"><pre><span></span><code>(base) jmao@pc:~/projects/Stable-MCCE$ pwd
-/home/jmao/projects/Stable-MCCE
-</code></pre></div></p>
-<p><strong>In my case the {/path/to/mcce/} is /home/jmao/projects/Stable-MCCE/</strong></p>
-<p>Add the executable to your path:
-<div class="highlight"><pre><span></span><code>export PATH={/path/to/mcce/}bin:$PATH
-</code></pre></div></p>
-<p>Remember to replace {/path/to/mcce/} with your installation path.</p>
-<p>Also put this line at the end of .bashrc file under your home directory so that the environment is properly set every time you open a terminal window.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Compiling on Mac OS X:</p>
 <p>On Mac OS X, an explicit memory free for tree is not supported. You may have to change this subroutine in file lib/db.c</p>
 <p><div class="highlight"><pre><span></span><code><span class="cm">/* release database memory */</span>
 <span class="kt">void</span> <span class="nf">free_param</span><span class="p">()</span> <span class="p">{</span>
@@ -705,45 +742,51 @@ to
 <span class="p">}</span>
 </code></pre></div></p>
 </div>
-<h2 id="python-requirement">Python requirement<a class="headerlink" href="#python-requirement" title="Permanent link">&para;</a></h2>
-<p>A significant part of the tools are written in Python3. You will need Python installed on your system. Example of installing Python and reuired modules:</p>
-<h3 id="install-python-package-manager-miniconda">Install Python package manager Miniconda<a class="headerlink" href="#install-python-package-manager-miniconda" title="Permanent link">&para;</a></h3>
-<p>Miniconda: <a href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
-<p>After installing Miniconda, install these modules:
-<div class="highlight"><pre><span></span><code>conda install numpy scipy matplotlib pandas openpyxl
+<h3 id="configure-environment">Configure environment<a class="headerlink" href="#configure-environment" title="Permanent link">&para;</a></h3>
+<p>Find the path of Stable-MCCE installation directory:
+<div class="highlight"><pre><span></span><code>(base) jmao@pc:~/projects/Stable-MCCE$ pwd
+/home/jmao/projects/Stable-MCCE
 </code></pre></div></p>
-<h2 id="run-mcce-in-simplest-way">Run MCCE in simplest way<a class="headerlink" href="#run-mcce-in-simplest-way" title="Permanent link">&para;</a></h2>
+<p>In my case the installation directory is <strong>/home/jmao/projects/Stable-MCCE/</strong></p>
+<p>Add the executable to your path:
+<div class="highlight"><pre><span></span><code>export PATH=/home/jmao/projects/Stable-MCCE/bin:$PATH
+</code></pre></div></p>
+<p>Remember to replace the installation directory <strong>/home/jmao/projects/Stable-MCCE/</strong> with your own installation path.</p>
+<p>Also put this line at the end of .bashrc file under your home directory so that the environment is properly set every time you open a terminal window.</p>
+<h2 id="run-mcce">Run MCCE<a class="headerlink" href="#run-mcce" title="Permanent link">&para;</a></h2>
 <h3 id="prepare-a-working-directory">Prepare a working directory:<a class="headerlink" href="#prepare-a-working-directory" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>mkdir test_lysozyme
-cd test_lysozyme
+<div class="highlight"><pre><span></span><code>$ mkdir test_lysozyme
+$ cd test_lysozyme
 </code></pre></div>
 
 <h3 id="get-a-pdb-file">Get a pdb file<a class="headerlink" href="#get-a-pdb-file" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>getpdb 1dpx
+<div class="highlight"><pre><span></span><code>$ getpdb 1dpx
 </code></pre></div>
 
 <p>You now have a pdb file 1DPX.pdb in the working directory.</p>
 <p>The simplest way to run mcce is do these four steps:</p>
 <h3 id="step-1-convert-pdb-file-into-mcce-pdb">Step 1 convert PDB file into MCCE PDB<a class="headerlink" href="#step-1-convert-pdb-file-into-mcce-pdb" title="Permanent link">&para;</a></h3>
-<p>This step proof reads the structure file and cut terminal residues and complex cofactors into smaller ones if necessary.
-<div class="highlight"><pre><span></span><code>step1.py 1DPX.pdb
+<p>This step proof reads the structure file and cuts terminal residues and complex cofactors into smaller ones if necessary.
+<div class="highlight"><pre><span></span><code>$ step1.py 1DPX.pdb
 </code></pre></div></p>
 <h3 id="step-2-make-side-chain-conformers">Step 2 make side chain conformers<a class="headerlink" href="#step-2-make-side-chain-conformers" title="Permanent link">&para;</a></h3>
 <p>This step makes alternative side chain locations and ionization states.
-<div class="highlight"><pre><span></span><code>step2.py
+<div class="highlight"><pre><span></span><code>$ step2.py
 </code></pre></div></p>
 <h3 id="step-3-make-energy-table">Step 3 make energy table<a class="headerlink" href="#step-3-make-energy-table" title="Permanent link">&para;</a></h3>
 <p>This step calculates conformer self energy and pairwise interaction table.
-<div class="highlight"><pre><span></span><code>step3.py
+<div class="highlight"><pre><span></span><code>$ step3.py
 </code></pre></div></p>
 <h3 id="step-4-simulate-a-titration-with-monte-carlo-sampling">Step 4 Simulate a titration with Monte Carlo sampling<a class="headerlink" href="#step-4-simulate-a-titration-with-monte-carlo-sampling" title="Permanent link">&para;</a></h3>
-<p>This setp simulates a titration and write out the conformation and ionization states of each side chain at various conditions.
-<div class="highlight"><pre><span></span><code>step4.py
+<p>This step simulates a titration and writes out the conformation and ionization states of each side chain at various conditions.
+<div class="highlight"><pre><span></span><code>$ step4.py
 </code></pre></div></p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>For more detailed command usages, use "-h" switch in each command above.</li>
-<li>Some steps take hours to finish, so it is recommended to run at the background. For example <code>step3.py &gt; run.log &amp;</code></li>
+<li>Some steps take hours to finish, so it is recommended to run at the background. For example:
+<div class="highlight"><pre><span></span><code>step3.py &gt; run.log &amp;
+</code></pre></div></li>
 </ul>
                 
                   
@@ -753,7 +796,7 @@ cd test_lysozyme
 <div class="md-source-date">
   <small>
     
-      Last update: 2020-07-01
+      Last update: 2020-07-07
     
   </small>
 </div>
